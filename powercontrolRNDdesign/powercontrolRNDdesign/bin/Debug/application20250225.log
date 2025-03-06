@@ -1,0 +1,140 @@
+2025-02-25 12:29:08 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 12:29:08 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 12:41:30 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 12:41:32 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 12:48:52 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 12:48:52 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 12:49:08 [Warning] [User: A513944] PSU not connected, cannot read set voltage.
+2025-02-25 12:49:12 [Info] [User: A513944] Apply succeeded: 24 V, 5 A on channel 1.
+2025-02-25 12:49:12 [Warning] [User: A513944] PSU not connected, cannot read set voltage.
+2025-02-25 12:49:18 [Info] [User: A513944] Apply succeeded: 24 V, 5 A on channel 1.
+2025-02-25 12:49:28 [Warning] [User: A513944] PSU not connected, cannot read set voltage.
+2025-02-25 12:49:29 [Info] [User: A513944] Apply succeeded: 24 V, 5 A on channel 2.
+2025-02-25 12:51:20 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 13:01:49 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 13:01:49 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 13:01:50 [Info] [User: A513944] Power cycle started on channel 1.
+2025-02-25 13:01:50 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 13:01:50 [Info] [User: A513944] Power cycle completed on channel 1.
+2025-02-25 13:01:52 [Info] [User: A513944] Power cycle started on channel 2.
+2025-02-25 13:01:52 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 13:01:52 [Info] [User: A513944] Power cycle completed on channel 2.
+2025-02-25 13:01:53 [Info] [User: A513944] Power cycle started on channel 3.
+2025-02-25 13:01:53 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 13:01:53 [Info] [User: A513944] Power cycle completed on channel 3.
+2025-02-25 13:01:55 [Info] [User: A513944] Power cycle started on channel 4.
+2025-02-25 13:01:55 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 13:01:55 [Info] [User: A513944] Power cycle completed on channel 4.
+2025-02-25 13:02:06 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 13:02:23 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 13:02:23 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 13:02:29 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 13:02:35 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 13:02:35 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 13:02:38 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 13:46:58 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 13:46:58 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 13:47:20 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 13:47:20 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 13:47:38 [Warning] [User: A513944] PSU not connected, cannot read set voltage.
+2025-02-25 13:47:39 [Info] [User: A513944] Apply succeeded: 24 V, 5 A on channel 1.
+2025-02-25 13:47:40 [Warning] [User: A513944] PSU not connected, cannot read set voltage.
+2025-02-25 13:47:41 [Info] [User: A513944] Apply succeeded: 24 V, 5 A on channel 1.
+2025-02-25 13:47:44 [Warning] [User: A513944] PSU not connected, cannot read set voltage.
+2025-02-25 13:47:45 [Info] [User: A513944] Apply succeeded: 24 V, 5 A on channel 2.
+2025-02-25 13:47:47 [Warning] [User: A513944] PSU not connected, cannot read set voltage.
+2025-02-25 13:47:48 [Info] [User: A513944] Apply succeeded: 2 V, 5 A on channel 2.
+2025-02-25 13:47:50 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 13:48:45 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 13:48:45 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 13:48:47 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 13:48:53 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 13:48:53 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 13:48:59 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 13:49:51 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 13:49:51 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 13:49:58 [Warning] [User: A513944] PSU not connected, cannot read set voltage.
+2025-02-25 13:49:58 [Info] [User: A513944] Apply succeeded: 2 V, 2 A on channel 1.
+2025-02-25 13:50:00 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 13:53:11 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 13:53:11 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 13:53:18 [Warning] [User: A513944] PSU not connected, cannot read set voltage.
+2025-02-25 13:53:18 [Info] [User: A513944] Apply succeeded: 6 V, 5 A on channel 1.
+2025-02-25 13:53:21 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 13:56:51 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 13:56:51 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 13:56:57 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 13:57:42 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 13:57:42 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 13:57:50 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 14:06:23 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 14:06:23 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 14:06:24 [Info] [User: A513944] Power cycle started on channel 1.
+2025-02-25 14:06:24 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 14:06:24 [Info] [User: A513944] Power cycle completed on channel 1.
+2025-02-25 14:06:28 [Info] [User: A513944] Power cycle started on channel 1.
+2025-02-25 14:06:28 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 14:06:28 [Info] [User: A513944] Power cycle completed on channel 1.
+2025-02-25 14:06:33 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 14:07:12 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 14:07:12 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 14:07:13 [Info] [User: A513944] Power cycle started on channel 1.
+2025-02-25 14:07:13 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 14:07:13 [Info] [User: A513944] Power cycle completed on channel 1.
+2025-02-25 14:07:14 [Info] [User: A513944] Power cycle started on channel 2.
+2025-02-25 14:07:14 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 14:07:14 [Info] [User: A513944] Power cycle completed on channel 2.
+2025-02-25 14:07:16 [Info] [User: A513944] Power cycle started on channel 1.
+2025-02-25 14:07:16 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 14:07:16 [Info] [User: A513944] Power cycle completed on channel 1.
+2025-02-25 14:07:19 [Info] [User: A513944] Power cycle started on channel 3.
+2025-02-25 14:07:19 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 14:07:19 [Info] [User: A513944] Power cycle completed on channel 3.
+2025-02-25 14:07:20 [Info] [User: A513944] Power cycle started on channel 4.
+2025-02-25 14:07:20 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 14:07:20 [Info] [User: A513944] Power cycle completed on channel 4.
+2025-02-25 14:07:22 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 14:09:27 [Info] [User: A513944] Form1: Instructions file opened.
+2025-02-25 14:09:31 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 14:09:31 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 14:09:32 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 14:11:51 [Info] [User: A513944] Form1: Instructions file opened.
+2025-02-25 14:11:58 [Info] [User: A513944] Form1: Instructions file opened.
+2025-02-25 14:12:01 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 14:12:01 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 14:12:02 [Info] [User: A513944] Power cycle started on channel 1.
+2025-02-25 14:12:02 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 14:12:02 [Info] [User: A513944] Power cycle completed on channel 1.
+2025-02-25 14:12:05 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 14:59:45 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 14:59:45 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 14:59:48 [Info] [User: A513944] Power cycle started on channel 1.
+2025-02-25 14:59:48 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 14:59:48 [Info] [User: A513944] Power cycle completed on channel 1.
+2025-02-25 14:59:51 [Info] [User: A513944] Form1: Application closed.
+2025-02-25 15:09:40 [Info] [User: A513944] Form1: Start button clicked.
+2025-02-25 15:09:41 [Warning] [User: A513944] PSU setting 'vcm100mid' not found in psu.json.
+2025-02-25 15:09:47 [Warning] [User: A513944] PSU not connected, cannot read set voltage.
+2025-02-25 15:09:48 [Info] [User: A513944] Apply succeeded: 22 V, 5 A on channel 1.
+2025-02-25 15:09:52 [Warning] [User: A513944] PSU not connected, cannot read set voltage.
+2025-02-25 15:09:54 [Info] [User: A513944] Apply succeeded: 22 V, 5 A on channel 1.
+2025-02-25 15:12:22 [Info] [User: A513944] Power cycle started on channel 1.
+2025-02-25 15:12:22 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 15:12:22 [Info] [User: A513944] Power cycle completed on channel 1.
+2025-02-25 15:12:27 [Info] [User: A513944] Power cycle started on channel 1.
+2025-02-25 15:12:27 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 15:12:27 [Info] [User: A513944] Power cycle completed on channel 1.
+2025-02-25 15:12:30 [Info] [User: A513944] Power cycle started on channel 1.
+2025-02-25 15:12:30 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 15:12:30 [Info] [User: A513944] Power cycle completed on channel 1.
+2025-02-25 15:12:32 [Info] [User: A513944] Power cycle started on channel 1.
+2025-02-25 15:12:32 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 15:12:32 [Info] [User: A513944] Power cycle completed on channel 1.
+2025-02-25 15:13:09 [Info] [User: A513944] Power cycle started on channel 1.
+2025-02-25 15:13:09 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 15:13:09 [Info] [User: A513944] Power cycle completed on channel 1.
+2025-02-25 15:13:15 [Info] [User: A513944] Power cycle started on channel 1.
+2025-02-25 15:13:15 [Warning] [User: A513944] PSU is not connected, cannot power cycle.
+2025-02-25 15:13:15 [Info] [User: A513944] Power cycle completed on channel 1.
+2025-02-25 15:13:17 [Warning] [User: A513944] PSU not connected, cannot read set voltage.
+2025-02-25 15:13:20 [Info] [User: A513944] Apply succeeded: 22 V, 5 A on channel 1.

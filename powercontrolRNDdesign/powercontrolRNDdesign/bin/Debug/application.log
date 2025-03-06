@@ -1,0 +1,39 @@
+2024-12-10 12:26:25 - Form1: Start button clicked.
+2024-12-10 12:26:27 - Form2: ComboBox selection changed to 'VCM102'.
+2024-12-10 12:26:27 - Form2: User selected 'VCM102'.
+2024-12-10 12:26:27 - Form1: Received selection 'VCM102' from Form2.
+2024-12-10 12:26:31 - Form3: Custom settings applied - Voltage: 2V, Current: 2A.
+2024-12-10 12:26:37 - Form1: Application closed.
+2024-12-10 12:30:04 - Form1: Start button clicked.
+2024-12-10 12:30:06 - Form2: ComboBox selection changed to 'VCM102'.
+2024-12-10 12:30:06 - Form2: User selected 'VCM102'.
+2024-12-10 12:30:06 - Form1: Received selection 'VCM102' from Form2.
+2024-12-10 12:30:18 - Voltage set to 24 V.
+2024-12-10 12:30:18 - Current set to 5 A.
+2024-12-10 12:30:23 - Form1: Application closed.
+2024-12-12 14:52:55 - Form1: Instructions file opened.
+2024-12-12 14:52:59 - Form1: Start button clicked.
+2024-12-12 14:53:02 - Form2: ComboBox selection changed to 'VCM101'.
+2024-12-12 14:53:02 - Form2: User selected 'VCM101'.
+2024-12-12 14:53:02 - Form1: Received selection 'VCM101' from Form2.
+2024-12-12 14:53:11 - Form1: Application closed.
+2024-12-12 14:54:54 - Form1: Instructions file opened.
+2024-12-12 14:55:06 - Form1: Instructions file opened.
+2024-12-12 14:55:10 - Form1: Start button clicked.
+2024-12-12 14:55:20 - Form2: ComboBox selection changed to 'VCM101'.
+2024-12-12 14:55:21 - Form2: User selected 'VCM101'.
+2024-12-12 14:55:21 - Form1: Received selection 'VCM101' from Form2.
+2024-12-12 14:55:50 - Voltage set to 24 V.
+2024-12-12 14:55:50 - Current set to 5 A.
+2024-12-17 14:56:23 - Form1: Start button clicked.
+2024-12-17 14:56:27 - Form1: Application closed.
+2024-12-17 14:56:30 - Form1: Start button clicked.
+2024-12-17 14:56:31 - Form1: Application closed.
+2024-12-17 14:56:38 - Form1: Start button clicked.
+2024-12-17 14:57:20 - Form1: Application closed.
+2024-12-17 14:58:36 - Form1: Start button clicked.
+2024-12-17 14:58:42 - Form1: Application closed.
+2024-12-17 15:07:25 - Form1: Start button clicked.
+2024-12-17 15:07:27 - Form1: Application closed.
+2025-02-18 14:19:16 - Form1: Start button clicked.
+2025-02-18 14:19:30 - Form1: Application closed.

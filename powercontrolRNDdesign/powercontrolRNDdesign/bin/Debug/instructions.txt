@@ -1,0 +1,21 @@
+-----------------------------------------------------------------------------------------------
+1. Overview
+The program facilitates:
+Configuration of voltage and current parameters.
+Selection of predefined VCM configurations.
+Monitoring of live settings.
+-----------------------------------------------------------------------------------------------
+2. Operating Instructions
+Step 1: Starting the Configuration Process
+Launch the program.
+In the main window (Form1), click the Start button to proceed.
+Step 2: Configuring Parameters
+In the configuration window (Form2):
+Enter your credentials if required.
+Select the desired VCM configuration (e.g., VCM101, VCM102, ..., VCM202) from the dropdown menu.
+Click Confirm to save the selection.
+Step 3: Monitoring Settings
+The monitoring window (Form3) will display:
+The selected VCM configuration.
+Real-time voltage and current values.
+-----------------------------------------------------------------------------------------------

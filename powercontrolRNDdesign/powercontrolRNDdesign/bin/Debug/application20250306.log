@@ -1,0 +1,122 @@
+2025-03-06 10:20:43 [Info] [User: a513944] Form1: Start button clicked.
+2025-03-06 10:20:48 [Warning] [User: a513944] Could not open port COM2: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 10:20:53 [Warning] [User: a513944] Could not open port COM1: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 10:20:54 [Info] [User: a513944] Connected with regex 790
+2025-03-06 10:20:54 [Info] [User: a513944] Connected to PSU with setting 'vcm100mid'.
+2025-03-06 10:20:54 [Info] [User: a513944] Default PSU settings applied for 'vcm100mid'.
+2025-03-06 10:21:04 [Info] [User: a513944] Power cycle started on channel 4.
+2025-03-06 10:21:12 [Info] [User: a513944] Channel 4 power cycle: was 0 V, now 12 V.
+2025-03-06 10:21:12 [Info] [User: a513944] Power cycle completed on channel 4.
+2025-03-06 10:21:14 [Info] [User: a513944] Power cycle started on channel 1.
+2025-03-06 10:21:19 [Info] [User: a513944] Channel 1 power cycle: was 0 V, now 24 V.
+2025-03-06 10:21:19 [Info] [User: a513944] Power cycle completed on channel 1.
+2025-03-06 10:21:31 [Info] [User: a513944] Set voltage on channel 1 to 12 V.
+2025-03-06 10:21:31 [Info] [User: a513944] Set current on channel 1 to 5 A.
+2025-03-06 10:21:31 [Info] [User: a513944] Retrieved set voltage from channel 1: 12 V.
+2025-03-06 10:21:33 [Info] [User: a513944] Apply succeeded: 12 V, 5 A on channel 1.
+2025-03-06 10:21:51 [Info] [User: a513944] Set voltage on channel 1 to 24 V.
+2025-03-06 10:21:51 [Info] [User: a513944] Set current on channel 1 to 5 A.
+2025-03-06 10:21:51 [Info] [User: a513944] Retrieved set voltage from channel 1: 24 V.
+2025-03-06 10:21:52 [Info] [User: a513944] Apply succeeded: 24 V, 5 A on channel 1.
+2025-03-06 10:22:00 [Info] [User: a513944] Set voltage on channel 2 to 24 V.
+2025-03-06 10:22:00 [Info] [User: a513944] Set current on channel 2 to 5 A.
+2025-03-06 10:22:00 [Info] [User: a513944] Retrieved set voltage from channel 2: 24 V.
+2025-03-06 10:22:05 [Info] [User: a513944] Apply succeeded: 24 V, 5 A on channel 2.
+2025-03-06 10:22:19 [Info] [User: a513944] Set voltage on channel 2 to 24 V.
+2025-03-06 10:22:19 [Info] [User: a513944] Set current on channel 2 to 5 A.
+2025-03-06 10:22:19 [Info] [User: a513944] Retrieved set voltage from channel 2: 24 V.
+2025-03-06 10:22:20 [Info] [User: a513944] Apply succeeded: 24 V, 5 A on channel 2.
+2025-03-06 10:22:33 [Info] [User: a513944] Set voltage on channel 2 to 24 V.
+2025-03-06 10:22:33 [Info] [User: a513944] Set current on channel 2 to 5 A.
+2025-03-06 10:22:33 [Info] [User: a513944] Retrieved set voltage from channel 2: 24 V.
+2025-03-06 10:22:34 [Info] [User: a513944] Apply succeeded: 24 V, 5 A on channel 2.
+2025-03-06 10:22:37 [Info] [User: a513944] Set voltage on channel 2 to 24 V.
+2025-03-06 10:22:37 [Info] [User: a513944] Set current on channel 2 to 5 A.
+2025-03-06 10:22:37 [Info] [User: a513944] Retrieved set voltage from channel 2: 24 V.
+2025-03-06 10:22:39 [Info] [User: a513944] Apply succeeded: 24 V, 5 A on channel 2.
+2025-03-06 10:22:46 [Info] [User: a513944] Set voltage on channel 3 to 12 V.
+2025-03-06 10:22:46 [Info] [User: a513944] Set current on channel 3 to 5 A.
+2025-03-06 10:22:46 [Info] [User: a513944] Retrieved set voltage from channel 3: 12 V.
+2025-03-06 10:22:49 [Info] [User: a513944] Apply succeeded: 12 V, 5 A on channel 3.
+2025-03-06 10:22:54 [Info] [User: a513944] Set voltage on channel 4 to 11 V.
+2025-03-06 10:22:54 [Info] [User: a513944] Set current on channel 4 to 5 A.
+2025-03-06 10:22:54 [Info] [User: a513944] Retrieved set voltage from channel 4: 11 V.
+2025-03-06 10:22:57 [Info] [User: a513944] Apply succeeded: 11 V, 5 A on channel 4.
+2025-03-06 10:23:20 [Info] [User: a513944] Set voltage on channel 2 to 11 V.
+2025-03-06 10:23:20 [Info] [User: a513944] Set current on channel 2 to 5 A.
+2025-03-06 10:23:20 [Info] [User: a513944] Retrieved set voltage from channel 2: 11 V.
+2025-03-06 10:23:22 [Info] [User: a513944] Apply succeeded: 11 V, 5 A on channel 2.
+2025-03-06 10:23:39 [Info] [User: a513944] Form1: Application closed.
+2025-03-06 10:24:06 [Info] [User: a513944] Form1: Instructions file opened.
+2025-03-06 10:24:17 [Info] [User: a513944] Form1: Start button clicked.
+2025-03-06 10:24:23 [Warning] [User: a513944] Could not open port COM2: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 10:24:28 [Warning] [User: a513944] Could not open port COM1: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 10:24:29 [Info] [User: a513944] Connected with regex 790
+2025-03-06 10:24:29 [Info] [User: a513944] Connected to PSU with setting 'vcm100mid'.
+2025-03-06 10:24:29 [Info] [User: a513944] Default PSU settings applied for 'vcm100mid'.
+2025-03-06 10:24:37 [Info] [User: a513944] Form1: Application closed.
+2025-03-06 10:29:33 [Info] [User: a513944] Form1: Start button clicked.
+2025-03-06 10:29:38 [Warning] [User: a513944] Could not open port COM2: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 10:29:43 [Warning] [User: a513944] Could not open port COM1: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 10:29:45 [Info] [User: a513944] Connected with regex 790
+2025-03-06 10:29:45 [Info] [User: a513944] Connected to PSU with setting 'vcm100mid'.
+2025-03-06 10:29:45 [Info] [User: a513944] Default PSU settings applied for 'vcm100mid'.
+2025-03-06 10:30:05 [Info] [User: a513944] Form1: Application closed.
+2025-03-06 10:30:22 [Info] [User: a513944] Form1: Start button clicked.
+2025-03-06 10:30:27 [Info] [User: a513944] Form1: Instructions file opened.
+2025-03-06 10:30:28 [Warning] [User: a513944] Could not open port COM2: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 10:30:33 [Warning] [User: a513944] Could not open port COM1: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 10:30:34 [Info] [User: a513944] Connected with regex 790
+2025-03-06 10:30:34 [Info] [User: a513944] Connected to PSU with setting 'vcm100mid'.
+2025-03-06 10:30:34 [Info] [User: a513944] Default PSU settings applied for 'vcm100mid'.
+2025-03-06 10:30:42 [Info] [User: a513944] Form1: Application closed.
+2025-03-06 10:32:28 [Info] [User: a513944] Form1: Start button clicked.
+2025-03-06 10:32:34 [Warning] [User: a513944] Could not open port COM2: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 10:32:39 [Warning] [User: a513944] Could not open port COM1: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 10:32:40 [Info] [User: a513944] Connected with regex 790
+2025-03-06 10:32:40 [Info] [User: a513944] Connected to PSU with setting 'vcm100mid'.
+2025-03-06 10:32:40 [Info] [User: a513944] Default PSU settings applied for 'vcm100mid'.
+2025-03-06 10:32:45 [Info] [User: a513944] Form1: Instructions file opened.
+2025-03-06 11:15:45 [Info] [User: a513944] Form1: Start button clicked.
+2025-03-06 11:15:50 [Warning] [User: a513944] Could not open port COM2: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 11:15:55 [Warning] [User: a513944] Could not open port COM1: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 11:15:57 [Info] [User: a513944] Connected with regex 790
+2025-03-06 11:15:57 [Info] [User: a513944] Connected to PSU with setting 'vcm100mid'.
+2025-03-06 11:15:57 [Info] [User: a513944] Default PSU settings applied for 'vcm100mid'.
+2025-03-06 11:16:11 [Info] [User: a513944] Form1: Application closed.
+2025-03-06 11:36:25 [Info] [User: a513944] Form1: Start button clicked.
+2025-03-06 11:36:30 [Warning] [User: a513944] Could not open port COM2: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 11:36:35 [Warning] [User: a513944] Could not open port COM1: Insufficient system resources exist to complete the requested service.
+
+2025-03-06 11:36:37 [Info] [User: a513944] Connected with regex 790
+2025-03-06 11:36:37 [Info] [User: a513944] Connected to PSU with setting 'vcm100mid'.
+2025-03-06 11:36:37 [Info] [User: a513944] Default PSU settings applied for 'vcm100mid'.
+2025-03-06 11:36:48 [Info] [User: a513944] Set voltage on channel 1 to 12 V.
+2025-03-06 11:36:48 [Info] [User: a513944] Set current on channel 1 to 5 A.
+2025-03-06 11:36:48 [Info] [User: a513944] Retrieved set voltage from channel 1: 12 V.
+2025-03-06 11:36:49 [Info] [User: a513944] Apply succeeded: 12 V, 5 A on channel 1.
+2025-03-06 11:36:54 [Info] [User: a513944] Set voltage on channel 1 to 24 V.
+2025-03-06 11:36:54 [Info] [User: a513944] Set current on channel 1 to 5 A.
+2025-03-06 11:36:54 [Info] [User: a513944] Retrieved set voltage from channel 1: 24 V.
+2025-03-06 11:36:55 [Info] [User: a513944] Apply succeeded: 24 V, 5 A on channel 1.
+2025-03-06 11:36:58 [Info] [User: a513944] Power cycle started on channel 1.
+2025-03-06 11:37:02 [Info] [User: a513944] Channel 1 power cycle: was 0 V, now 24 V.
+2025-03-06 11:37:02 [Info] [User: a513944] Power cycle completed on channel 1.
+2025-03-06 11:37:15 [Info] [User: a513944] Power cycle started on channel 4.
+2025-03-06 11:37:24 [Info] [User: a513944] Channel 4 power cycle: was 0 V, now 12 V.
+2025-03-06 11:37:24 [Info] [User: a513944] Power cycle completed on channel 4.
+2025-03-06 11:38:28 [Info] [User: a513944] Form3: Instructions file opened.
+2025-03-06 11:41:54 [Info] [User: a513944] Form1: Application closed.

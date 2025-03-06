@@ -1,0 +1,207 @@
+[
+  {
+    "setting": "vcm200PriAndSec",
+    "regex": "790",
+    "baudrate": 115200,
+    "channel": [
+      {
+        "id": 1,
+        "usage": "vcmPri",
+        "defaultVout": 24.0,
+        "defaultImax": 5.0,
+        "defaultOn": true
+      },
+      {
+        "id": 2,
+        "usage": "vcmSec",
+        "defaultVout": 24.0,
+        "defaultImax": 5.0,
+        "defaultOn": true
+      },
+      {
+        "id": 3,
+        "usage": "vocom",
+        "defaultVout": 24.0,
+        "defaultImax": 2.0,
+        "defaultOn": false
+      },
+      {
+        "id": 4,
+        "usage": "vectorRigHw",
+        "defaultVout": 12.0,
+        "defaultImax": 5.0,
+        "defaultOn": true
+      }
+    ]
+  },
+  {
+    "setting": "vcm200Pri",
+    "regex": "790",
+    "baudrate": 115200,
+    "channel": [
+      {
+        "id": 1,
+        "usage": "vcmPri",
+        "defaultVout": 24.0,
+        "defaultImax": 5.0,
+        "defaultOn": true
+      },
+      {
+        "id": 2,
+        "usage": "vcmSec",
+        "defaultVout": 24.0,
+        "defaultImax": 5.0,
+        "defaultOn": false
+      },
+      {
+        "id": 3,
+        "usage": "vocom",
+        "buttonText": "Vocom",
+        "defaultVout": 24.0,
+        "defaultImax": 2.0,
+        "defaultOn": false
+      },
+      {
+        "id": 4,
+        "usage": "vectorRigHw",
+        "defaultVout": 12.0,
+        "defaultImax": 5.0,
+        "defaultOn": true
+      }
+    ]
+  },
+  {
+    "setting": "vcm200Sec",
+    "regex": "790",
+    "baudrate": 115200,
+    "channel": [
+      {
+        "id": 1,
+        "usage": "vcmPri",
+        "defaultVout": 24.0,
+        "defaultImax": 5.0,
+        "defaultOn": false
+      },
+      {
+        "id": 2,
+        "usage": "vcmSec",
+        "defaultVout": 24.0,
+        "defaultImax": 5.0,
+        "defaultOn": true
+      },
+      {
+        "id": 3,
+        "usage": "vocom",
+        "defaultVout": 24.0,
+        "defaultImax": 2.0,
+        "defaultOn": false
+      },
+      {
+        "id": 4,
+        "usage": "vectorRigHw",
+        "defaultVout": 12.0,
+        "defaultImax": 5.0,
+        "defaultOn": true
+      }
+    ]
+  },
+  {
+    "setting": "vcm100mid",
+    "regex": "790",
+    "baudrate": 115200,
+    "channel": [
+      {
+        "id": 1,
+        "usage": "vcmMid",
+        "defaultVout": 24.0,
+        "defaultImax": 5.0,
+        "defaultOn": true
+      },
+      {
+        "id": 2,
+        "usage": "vcmMidPlus",
+        "defaultVout": 24.0,
+        "defaultImax": 5.0,
+        "defaultOn": false
+      },
+      {
+        "id": 3,
+        "usage": "vocom",
+        "buttonText": "Vocom",
+        "defaultVout": 24.0,
+        "defaultImax": 2.0,
+        "defaultOn": true
+      },
+      {
+        "id": 4,
+        "usage": "vectorRigHw",
+        "defaultVout": 12.0,
+        "defaultImax": 5.0,
+        "defaultOn": true
+      }
+    ]
+  },
+  {
+    "setting": "vcm100MidPlus",
+    "regex": "790",
+    "baudrate": 115200,
+    "channel": [
+      {
+        "id": 1,
+        "usage": "vcmMid",
+        "defaultVout": 24.0,
+        "defaultImax": 5.0,
+        "defaultOn": false
+      },
+      {
+        "id": 2,
+        "usage": "vcmMidPlus",
+        "defaultVout": 24.0,
+        "defaultImax": 5.0,
+        "defaultOn": true
+      },
+      {
+        "id": 3,
+        "usage": "vocom",
+        "defaultVout": 24.0,
+        "defaultImax": 2.0,
+        "defaultOn": true
+      },
+      {
+        "id": 4,
+        "usage": "vectorRigHw",
+        "defaultVout": 12.0,
+        "defaultImax": 5.0,
+        "defaultOn": true
+      }
+    ]
+  },
+  {
+    "setting": "anyRigRnd320_24V",
+    "regex": "320",
+    "baudrate": 9600,
+    "channel": [
+      {
+        "id": 1,
+        "usage": "anyDevice24V",
+        "defaultVout": 24.0,
+        "defaultImax": 5.0,
+        "defaultOn": true
+      }
+    ]
+  },
+  {
+    "setting": "anyRigRnd320_12V",
+    "regex": "320",
+    "baudrate": 9600,
+    "channel": [
+      {
+        "id": 1,
+        "usage": "anyDevice12V",
+        "defaultVout": 12.0,
+        "defaultImax": 5.0,
+        "defaultOn": true
+      }
+    ]
+  }
+]

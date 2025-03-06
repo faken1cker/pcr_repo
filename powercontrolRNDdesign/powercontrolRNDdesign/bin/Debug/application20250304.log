@@ -1,0 +1,7 @@
+2025-03-04 10:52:12 [Info] [User: A513944] Form1: Start button clicked.
+2025-03-04 10:52:17 [Warning] [User: A513944] Could not open port COM2: Insufficient system resources exist to complete the requested service.
+
+2025-03-04 10:52:22 [Warning] [User: A513944] Could not open port COM1: Insufficient system resources exist to complete the requested service.
+
+2025-03-04 10:52:22 [Warning] [User: A513944] Failed to connect to PSU.
+2025-03-04 10:53:48 [Info] [User: A513944] Form1: Application closed.
