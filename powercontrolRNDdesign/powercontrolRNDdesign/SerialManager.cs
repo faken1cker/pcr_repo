@@ -4,6 +4,7 @@ using System.IO.Ports;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Win32;
 
 namespace powercontrolRNDdesign
 {
@@ -27,6 +28,49 @@ namespace powercontrolRNDdesign
             _dataBit = 8;
         }
 
+        /// <summary>
+        /// Checks the deployment flag from the registry.
+        /// The registry key is HKLM\SOFTWARE\V3rigInfo and the DWORD value "deployment_status" is expected.
+        /// A value of 1 indicates deployment active (read-only), while 0 means normal (read/write).
+        /// </summary>
+        private bool IsDeploymentActive()
+        {
+            try
+            {
+                // Specify the registry view explicitly.
+                using (RegistryKey baseKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64))
+                using (RegistryKey key = baseKey.OpenSubKey(@"SOFTWARE\V3rigInfo", false))
+                {
+                    if (key == null)
+                    {
+                        Logger.LogAction("Registry key 'SOFTWARE\\V3rigInfo' not found. Assuming deployment inactive.", "Warning");
+                        return false;
+                    }
+
+                    object rawValue = key.GetValue("deployment_status");
+                    if (rawValue == null)
+                    {
+                        Logger.LogAction("Registry value 'deployment_status' is missing. This indicates an error.", "Error");
+                        return false;
+                    }
+
+                    int status = (int)rawValue;
+                    return status == 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogAction($"Error reading deployment_status from registry: {ex.Message}", "Error");
+                return false;
+            }
+        }
+
+        public bool DeploymentActive
+        {
+            get { return IsDeploymentActive(); }
+        }
+
+
         #region Talk to the power supply
 
         private void SendCmdToSerial(string _cmd)
@@ -48,7 +92,7 @@ namespace powercontrolRNDdesign
         }
 
         /// <summary>
-        /// Reads data asynchronously, no debug logs to avoid spamming the log file.
+        /// Reads data asynchronously, without spamming debug logs.
         /// </summary>
         private async Task ReadSerialPortAsync()
         {
@@ -66,14 +110,34 @@ namespace powercontrolRNDdesign
 
         #region Commands to power supply
 
+        /// <summary>
+        /// Locks or unlocks the PSU keys.
+        /// </summary>
         public void LockKeyOnPowerSupply(bool lockState)
         {
+            // Write operation – check deployment flag
+            if (IsDeploymentActive())
+            {
+                Logger.LogAction("Deployment is active, blocking LockKeyOnPowerSupply command.", "Warning");
+                return;
+            }
+
             if (lockState) SendCmdToRnd("LOCK:1");
             else SendCmdToRnd("LOCK:0");
         }
 
+        /// <summary>
+        /// Enables/disables output for a single-channel PSU.
+        /// </summary>
         public void EnableVoutOnChannel1(bool channelState)
         {
+            // Write operation – check deployment flag
+            if (IsDeploymentActive())
+            {
+                Logger.LogAction("Deployment is active, blocking EnableVoutOnChannel1 command.", "Warning");
+                return;
+            }
+
             if (_connected)
             {
                 string onOff = channelState ? "1" : "0";
@@ -82,8 +146,18 @@ namespace powercontrolRNDdesign
             }
         }
 
+        /// <summary>
+        /// Enables/disables output for a multi-channel PSU.
+        /// </summary>
         public void EnableVoutOnChannel1_4(int channelToSet, bool channelState)
         {
+            // Write operation – check deployment flag
+            if (IsDeploymentActive())
+            {
+                Logger.LogAction("Deployment is active, blocking EnableVoutOnChannel1_4 command.", "Warning");
+                return;
+            }
+
             if (_connected && CheckValidChannel(channelToSet))
             {
                 string onOff = channelState ? "1" : "0";
@@ -92,8 +166,18 @@ namespace powercontrolRNDdesign
             }
         }
 
+        /// <summary>
+        /// Sets the voltage for a specific channel.
+        /// </summary>
         public void SetVoutChannel1_4_0_30V(int channelToSet, double vout)
         {
+            // Write operation – check deployment flag
+            if (IsDeploymentActive())
+            {
+                Logger.LogAction("Deployment is active, blocking SetVoutChannel1_4_0_30V command.", "Warning");
+                return;
+            }
+
             if (CheckValidChannel(channelToSet) && CheckValidVout(vout))
             {
                 string cmd = $"VSET{channelToSet}:{vout.ToString("F3", CultureInfo.InvariantCulture)}";
@@ -101,8 +185,18 @@ namespace powercontrolRNDdesign
             }
         }
 
+        /// <summary>
+        /// Sets the current limit for a specific channel.
+        /// </summary>
         public void SetIoutLimitChannel1_4_0_5A(int channelToSet, double iout)
         {
+            // Write operation – check deployment flag
+            if (IsDeploymentActive())
+            {
+                Logger.LogAction("Deployment is active, blocking SetIoutLimitChannel1_4_0_5A command.", "Warning");
+                return;
+            }
+
             if (CheckValidChannel(channelToSet) && CheckValidIout(iout))
             {
                 string cmd = $"ISET{channelToSet}:{iout.ToString("F3", CultureInfo.InvariantCulture)}";
@@ -112,7 +206,7 @@ namespace powercontrolRNDdesign
 
         /// <summary>
         /// Reads the actual output voltage (VOUTx?) for channel 1–4.
-        /// No "Read Vout async..." log statements, just parse failures if needed.
+        /// No detailed debug logs are produced unless parsing fails.
         /// </summary>
         public async Task<double?> ReadVoutChannel1_4Async(int channelToRead)
         {
@@ -136,7 +230,7 @@ namespace powercontrolRNDdesign
 
         /// <summary>
         /// Reads the actual output current (IOUTx?) for channel 1–4.
-        /// No "Read Iout async..." log statements, just parse failures if needed.
+        /// No detailed debug logs are produced unless parsing fails.
         /// </summary>
         public async Task<double?> ReadIoutChannel1_4Async(int channelToRead)
         {
@@ -267,9 +361,8 @@ namespace powercontrolRNDdesign
         }
 
         /// <summary>
-        /// Reads the "Set Voltage" from the PSU for a given channel, i.e., 
-        /// the user-set target, not necessarily the actual measured Vout.
-        /// Also doesn't log each read call, just parse failures.
+        /// Reads the "Set Voltage" from the PSU for a given channel,
+        /// i.e., the user-set target, not necessarily the actual measured Vout.
         /// </summary>
         public async Task<double?> GetSetVoltageAsync(int channelToRead)
         {
@@ -287,8 +380,6 @@ namespace powercontrolRNDdesign
             _buffer = _buffer.Trim();
             if (double.TryParse(_buffer, NumberStyles.Float, CultureInfo.InvariantCulture, out double voltage))
             {
-                // We could log success or skip it. If you want to see fewer logs, skip it:
-                // Logger.LogAction($"Read set voltage for channel {channelToRead}: {voltage} V", "Info");
                 return voltage;
             }
             else
@@ -297,5 +388,6 @@ namespace powercontrolRNDdesign
                 return null;
             }
         }
+
     }
 }

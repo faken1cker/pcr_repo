@@ -10,7 +10,7 @@ namespace powercontrolRNDdesign
     public class Controller
     {
         private SerialManager _serialManager;
-        private List<PsuCfg> _psu; // Holds all possible PSU configs from psu.json
+        private List<PsuCfg> _psu; // Holds all possible PSU configs from Psu.json
         private PsuCfg _currentPsuSetting; // The active PSU setting
         public bool IsConnected { get; private set; } = false;
 
@@ -18,10 +18,10 @@ namespace powercontrolRNDdesign
         /// Constructor that loads a config for the specified psuSetting
         /// and attempts to connect using the loaded baudrate and regex.
         /// </summary>
-        /// <param name="psuSetting">A key from psu.json, e.g. "vcm100Mid" or similar</param>
+        /// <param name="psuSetting">A key from Psu.json, e.g. "vcm100mid" or similar</param>
         public Controller(string psuSetting)
         {
-            // Attempt to load psu.json, find the specified setting, and connect
+            // Attempt to load Psu.json, find the specified setting, and connect.
             if (LoadPsuSetting(psuSetting))
             {
                 _serialManager = new SerialManager(_currentPsuSetting.baudrate);
@@ -33,13 +33,12 @@ namespace powercontrolRNDdesign
             }
             else
             {
-                Logger.LogAction($"PSU setting '{psuSetting}' not found in psu.json.", "Warning");
+                Logger.LogAction($"PSU setting '{psuSetting}' not found in Psu.json.", "Warning");
             }
         }
 
         /// <summary>
-        /// Loads psu.json from ../../config/Psu.json,
-        /// then searches for the given psuSetting in the loaded list.
+        /// Loads Psu.json from ../../config/Psu.json and searches for the given psuSetting.
         /// </summary>
         private bool LoadPsuSetting(string psuSetting)
         {
@@ -71,14 +70,14 @@ namespace powercontrolRNDdesign
             }
             catch (Exception ex)
             {
-                Logger.LogError($"Failed to read psu.json: {ex.Message}");
+                Logger.LogError($"Failed to read Psu.json: {ex.Message}");
                 return false;
             }
         }
 
         /// <summary>
-        /// Connects the serial manager to the PSU, using a regex to match its identity.
-        /// Sets IsConnected to true if match is found, otherwise false.
+        /// Connects the SerialManager to the PSU using a regex to match its identity.
+        /// Sets IsConnected to true if match is found.
         /// </summary>
         private bool ConnectToPsu(string psuRegex)
         {
@@ -96,7 +95,7 @@ namespace powercontrolRNDdesign
         }
 
         /// <summary>
-        /// Disconnects from the PSU, logs if unsuccessful.
+        /// Disconnects from the PSU, logging if unsuccessful.
         /// </summary>
         public void Disconnect()
         {
@@ -106,15 +105,14 @@ namespace powercontrolRNDdesign
             }
             else
             {
-                // Optionally unlock PSU keys here
+                // Optionally unlock PSU keys here.
                 _serialManager?.LockKeyOnPowerSupply(false);
             }
             IsConnected = false;
         }
 
         /// <summary>
-        /// Applies default on/off state, default voltage, and default current
-        /// for each channel defined in the current PSU config (e.g. 1–4 channels).
+        /// Applies default on/off state, default voltage, and default current for each channel.
         /// </summary>
         private void ApplyPsuSettings(PsuCfg p)
         {
@@ -130,28 +128,37 @@ namespace powercontrolRNDdesign
         }
 
         /// <summary>
-        /// Sets voltage on the given channel (1–4), if connected.
+        /// Sets voltage on the given channel (1–4) if connected.
+        /// Throws an exception if the deployment flag is active.
         /// </summary>
         public void SetVoltage(int channel, double voltage)
         {
             if (!IsConnected || _serialManager == null) return;
+            if (_serialManager.DeploymentActive)
+            {
+                throw new InvalidOperationException("Operation failed: Deployment status active (read-only).");
+            }
             _serialManager.SetVoutChannel1_4_0_30V(channel, voltage);
             Logger.LogAction($"Set voltage on channel {channel} to {voltage} V.");
         }
 
         /// <summary>
-        /// Sets current limit on the given channel (1–4), if connected.
+        /// Sets current limit on the given channel (1–4) if connected.
+        /// Throws an exception if the deployment flag is active.
         /// </summary>
         public void SetCurrent(int channel, double current)
         {
             if (!IsConnected || _serialManager == null) return;
+            if (_serialManager.DeploymentActive)
+            {
+                throw new InvalidOperationException("Operation failed: Deployment status active (read-only).");
+            }
             _serialManager.SetIoutLimitChannel1_4_0_5A(channel, current);
             Logger.LogAction($"Set current on channel {channel} to {current} A.");
         }
 
         /// <summary>
-        /// Reads the "set voltage" for a particular channel, i.e., the user-defined
-        /// voltage setting (not necessarily the actual measured output).
+        /// Reads the "set voltage" for a particular channel (the user-defined voltage).
         /// </summary>
         public async Task<double?> GetSetVoltageFromChannelAsync(int channel)
         {
@@ -177,12 +184,11 @@ namespace powercontrolRNDdesign
         }
 
         /// <summary>
-        /// Initiates a power cycle on the given channel (1–4), asynchronously.
-        /// Disables, waits, re-enables, etc.
+        /// Initiates a power cycle on the given channel (1–4) asynchronously.
+        /// Throws an exception if the deployment flag is active.
         /// </summary>
         public async Task PowerCycleChannel(int channelToCycle)
         {
-            // 1) Check if SerialManager is valid and connected
             if (_serialManager == null)
             {
                 Logger.LogAction("SerialManager is null; cannot power cycle.", "Warning");
@@ -193,42 +199,36 @@ namespace powercontrolRNDdesign
                 Logger.LogAction("PSU not connected; cannot power cycle.", "Warning");
                 return;
             }
+            if (_serialManager.DeploymentActive)
+            {
+                throw new InvalidOperationException("Operation failed: Deployment status active (read-only).");
+            }
 
-            // For channel 4, Vector hardware needs more time to powercycle
-            // If it's channel 4, use custom times. Otherwise, use the defaults from your original code.
-
-            // First wait after turning the channel off
+            // Determine wait times: if channel 4, use longer delays.
             int firstOffWait = (channelToCycle == 4) ? 3000 : 1500;
-            // Second wait before turning channel on
             int secondOffWait = (channelToCycle == 4) ? 3000 : 1500;
-            // Final wait after turning the channel on
             int onWait = (channelToCycle == 4) ? 2500 : 1250;
 
-            // 2) Turn off the channel
+            // 1) Turn off the channel.
             _serialManager.EnableVoutOnChannel1_4(channelToCycle, false);
             await Task.Delay(firstOffWait);
 
-            // Read the voltage after turning off
+            // Read voltage after turning off.
             double? voutBefore = await _serialManager.ReadVoutChannel1_4Async(channelToCycle);
             await Task.Delay(secondOffWait);
 
-            // 3) Turn on the channel
+            // 2) Turn on the channel.
             _serialManager.EnableVoutOnChannel1_4(channelToCycle, true);
             await Task.Delay(onWait);
 
-            // Read the voltage after turning on
+            // Read voltage after turning on.
             double? voutAfter = await _serialManager.ReadVoutChannel1_4Async(channelToCycle);
 
-            Logger.LogAction(
-                $"Channel {channelToCycle} power cycle: was {voutBefore ?? -1} V, now {voutAfter ?? -1} V.",
-                "Info"
-            );
+            Logger.LogAction($"Channel {channelToCycle} power cycle: was {voutBefore ?? -1} V, now {voutAfter ?? -1} V.", "Info");
         }
 
         /// <summary>
-        /// Reads the measured (actual) voltage for a particular channel (1–4),
-        /// using the same approach as power cycle's read method. If your PSU
-        /// indeed uses VOUTx? to report actual measured voltage, this is valid.
+        /// Reads the measured (actual) voltage for a particular channel (1–4).
         /// </summary>
         public async Task<double?> GetMeasuredVoltageFromChannelAsync(int channel)
         {
@@ -240,7 +240,6 @@ namespace powercontrolRNDdesign
 
         /// <summary>
         /// Reads the measured (actual) current for a particular channel (1–4).
-        /// This calls SerialManager's ReadIoutChannel1_4Async method (IOUTx?).
         /// </summary>
         public async Task<double?> GetMeasuredCurrentFromChannelAsync(int channel)
         {
@@ -248,6 +247,14 @@ namespace powercontrolRNDdesign
 
             double? current = await _serialManager.ReadIoutChannel1_4Async(channel);
             return current;
+        }
+
+        /// <summary>
+        /// Exposes the deployment status from SerialManager.
+        /// </summary>
+        public bool DeploymentActive
+        {
+            get { return _serialManager != null && _serialManager.DeploymentActive; }
         }
     }
 }

@@ -215,5 +215,23 @@ namespace powercontrolRNDdesign
         {
             _controller.Disconnect();
         }
+
+        private void DeploymentTimer_Tick(object sender, EventArgs e)
+        {
+            if (_controller != null)
+            {
+                // Get the deployment status from Controller (which gets it from SerialManager)
+                bool deploymentActive = _controller.DeploymentActive;
+
+                // Update the label text based on the status
+                labelDeploymentStatus.Text = deploymentActive
+                    ? "Deployment Status: Active (Read-Only)"
+                    : "Deployment Status: Inactive (Read/Write)";
+
+                // Change the label color for better visibility
+                labelDeploymentStatus.ForeColor = deploymentActive ? System.Drawing.Color.Red : System.Drawing.Color.Green;
+            }
+        }
+
     }
 }

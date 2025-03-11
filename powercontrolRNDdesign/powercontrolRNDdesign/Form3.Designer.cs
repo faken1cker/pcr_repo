@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.labelCh1Voltage = new System.Windows.Forms.Label();
             this.labelCh1Current = new System.Windows.Forms.Label();
@@ -40,9 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxVoltage = new System.Windows.Forms.TextBox();
             this.textBoxCurrent = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.labelCh2Current = new System.Windows.Forms.Label();
             this.labelCh2Voltage = new System.Windows.Forms.Label();
             this.labelCh3Current = new System.Windows.Forms.Label();
@@ -59,6 +57,8 @@
             this.powerCycleChannel2Button = new System.Windows.Forms.Button();
             this.powerCycleChannel1Button = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.labelDeploymentStatus = new System.Windows.Forms.Label();
+            this.DeploymentTimer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,36 +161,6 @@
             this.textBoxCurrent.Name = "textBoxCurrent";
             this.textBoxCurrent.Size = new System.Drawing.Size(178, 36);
             this.textBoxCurrent.TabIndex = 20;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(348, 457);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(376, 29);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Software under deployment(T/F):";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(348, 486);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(453, 29);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Please note, none of the controls will be ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(348, 511);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(277, 29);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "available if status is True";
             // 
             // labelCh2Current
             // 
@@ -360,12 +330,28 @@
             this.comboBox1.Size = new System.Drawing.Size(178, 37);
             this.comboBox1.TabIndex = 43;
             // 
+            // labelDeploymentStatus
+            // 
+            this.labelDeploymentStatus.AutoSize = true;
+            this.labelDeploymentStatus.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F);
+            this.labelDeploymentStatus.Location = new System.Drawing.Point(347, 467);
+            this.labelDeploymentStatus.Name = "labelDeploymentStatus";
+            this.labelDeploymentStatus.Size = new System.Drawing.Size(81, 29);
+            this.labelDeploymentStatus.TabIndex = 44;
+            this.labelDeploymentStatus.Text = "label1";
+            // 
+            // DeploymentTimer
+            // 
+            this.DeploymentTimer.Enabled = true;
+            this.DeploymentTimer.Tick += new System.EventHandler(this.DeploymentTimer_Tick);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(819, 553);
+            this.Controls.Add(this.labelDeploymentStatus);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.powerCycleChannel1Button);
             this.Controls.Add(this.powerCycleChannel2Button);
@@ -382,9 +368,6 @@
             this.Controls.Add(this.labelCh3Voltage);
             this.Controls.Add(this.labelCh2Current);
             this.Controls.Add(this.labelCh2Voltage);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxCurrent);
             this.Controls.Add(this.textBoxVoltage);
             this.Controls.Add(this.label3);
@@ -420,9 +403,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxVoltage;
         private System.Windows.Forms.TextBox textBoxCurrent;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label labelCh2Current;
         private System.Windows.Forms.Label labelCh2Voltage;
         private System.Windows.Forms.Label labelCh3Current;
@@ -439,5 +419,7 @@
         private System.Windows.Forms.Button powerCycleChannel2Button;
         private System.Windows.Forms.Button powerCycleChannel1Button;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label labelDeploymentStatus;
+        private System.Windows.Forms.Timer DeploymentTimer;
     }
 }
