@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Threading.Tasks;
+using Microsoft.Win32;
 
 namespace powercontrolRNDdesign
 {
@@ -26,8 +27,35 @@ namespace powercontrolRNDdesign
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // Additional initialization logic if needed.
+            // Retrieve the rig type from the registry.
+            string rigType = GetRigTypeFromRegistry();
+
+            // Populate combobox dynamically.
+            PopulateChannelDropdown();
+
+            // Update channel labels based on the rig type.
+            if (rigType.Equals("VCM100", StringComparison.OrdinalIgnoreCase))
+            {
+                // For VCM100, only channel 1 is connected.
+                labelCh1Name.Text = "VCM(1)";
+                labelCh2Name.Text = "Nothing connected(2)";
+            }
+            else if (rigType.Equals("VCM200", StringComparison.OrdinalIgnoreCase))
+            {
+                // For VCM200, channels 1 and 2 are used.
+                labelCh1Name.Text = "VCM_P(1)";  // Primary
+                labelCh2Name.Text = "VCM_S(2)";  // Secondary
+            }
+            else
+            {
+                // Default labels if the rig type is unknown.
+                labelCh1Name.Text = "Channel 1";
+                labelCh2Name.Text = "Channel 2";
+            }
+
+            // (Optional) Update other channel labels if needed.
         }
+
 
         private void openInstructionsFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -128,14 +156,14 @@ namespace powercontrolRNDdesign
         {
             try
             {
-                if (comboBox1.SelectedIndex < 0)
+                if (comboBoxChannels.SelectedIndex < 0)
                 {
                     MessageBox.Show("Please choose a channel before pressing apply.",
                                     "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                int channel = comboBox1.SelectedIndex + 1;
+                int channel = comboBoxChannels.SelectedIndex + 1;
 
                 if (!double.TryParse(textBoxVoltage.Text, out double voltage) || voltage < 0 || voltage > 24.0)
                 {
@@ -207,6 +235,86 @@ namespace powercontrolRNDdesign
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void PopulateChannelDropdown()
+        {
+            // Get rigtype from registry.
+            string rigType = GetRigTypeFromRegistry();
+
+            // Clear previous values in combobox.
+            comboBoxChannels.Items.Clear();
+
+            // Kanal 1: Dynamic based on rigtype.
+            if (rigType.Equals("VCM100", StringComparison.OrdinalIgnoreCase))
+            {
+                comboBoxChannels.Items.Add("VCM(1)");
+            }
+            else if (rigType.Equals("VCM200", StringComparison.OrdinalIgnoreCase))
+            {
+                comboBoxChannels.Items.Add("VCM_P(1)");
+            }
+            else
+            {
+                // If rigtype is unknown.
+                comboBoxChannels.Items.Add("Channel 1");
+            }
+
+            // Channel 2: Dynamic based on rigtype.
+            if (rigType.Equals("VCM100", StringComparison.OrdinalIgnoreCase))
+            {
+                comboBoxChannels.Items.Add("N/A(2)");
+            }
+            else if (rigType.Equals("VCM200", StringComparison.OrdinalIgnoreCase))
+            {
+                comboBoxChannels.Items.Add("VCM_S(2)");
+            }
+            else
+            {
+                comboBoxChannels.Items.Add("Channel 2");
+            }
+
+            // Channel 3 : Always Vocom(3).
+            comboBoxChannels.Items.Add("Vocom(3)");
+
+            // Channel 4 : Always Vector(4)
+            comboBoxChannels.Items.Add("Vector(4)");
+        }
+
+        private string GetRigTypeFromRegistry()
+        {
+            try
+            {
+                // Open base key with 64-bit view explicitly.
+                using (RegistryKey baseKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64))
+                using (RegistryKey key = baseKey.OpenSubKey(@"SOFTWARE\V3rigInfo", false))
+                {
+                    if (key != null)
+                    {
+                        object value = key.GetValue("type");
+                        if (value != null)
+                        {
+                            string rigType = value.ToString().Trim();
+                            Logger.LogAction("Rig type read from registry: " + rigType, "Info");
+                            return rigType;
+                        }
+                        else
+                        {
+                            Logger.LogAction("Registry value 'type' not found.", "Warning");
+                        }
+                    }
+                    else
+                    {
+                        Logger.LogAction("Registry key 'SOFTWARE\\V3rigInfo' not found.", "Warning");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogAction("Error reading rig type from registry: " + ex.Message, "Error");
+            }
+            return "VCM100";
+        }
+
 
         /// <summary>
         /// Ensures the PSU connection is closed when the form is closing.

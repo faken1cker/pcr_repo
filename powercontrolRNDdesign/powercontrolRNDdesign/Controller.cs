@@ -28,7 +28,7 @@ namespace powercontrolRNDdesign
 
                 if (ConnectToPsu(_currentPsuSetting.regex))
                 {
-                    ApplyPsuSettings(_currentPsuSetting);
+                   // ApplyPsuSettings(_currentPsuSetting); Remove comment to apply default settings on startup
                 }
             }
             else
