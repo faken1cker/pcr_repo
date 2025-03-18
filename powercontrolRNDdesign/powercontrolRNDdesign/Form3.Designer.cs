@@ -132,9 +132,9 @@
             this.label2.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(552, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 29);
+            this.label2.Size = new System.Drawing.Size(201, 29);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Select Voltage (V):";
+            this.label2.Text = "Input Voltage (V):";
             // 
             // label3
             // 
@@ -142,9 +142,9 @@
             this.label3.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(552, 194);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(266, 29);
+            this.label3.Size = new System.Drawing.Size(254, 29);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Select Max Current (A):";
+            this.label3.Text = "Input Max Current (A):";
             // 
             // textBoxVoltage
             // 
@@ -238,9 +238,9 @@
             this.labelCh1Name.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCh1Name.Location = new System.Drawing.Point(12, 24);
             this.labelCh1Name.Name = "labelCh1Name";
-            this.labelCh1Name.Size = new System.Drawing.Size(201, 29);
+            this.labelCh1Name.Size = new System.Drawing.Size(236, 29);
             this.labelCh1Name.TabIndex = 35;
-            this.labelCh1Name.Text = "VCM/VCM_P(1)";
+            this.labelCh1Name.Text = "VCM/VCM_P(CH1)";
             // 
             // labelCh2Name
             // 
@@ -248,9 +248,9 @@
             this.labelCh2Name.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCh2Name.Location = new System.Drawing.Point(12, 147);
             this.labelCh2Name.Name = "labelCh2Name";
-            this.labelCh2Name.Size = new System.Drawing.Size(133, 29);
+            this.labelCh2Name.Size = new System.Drawing.Size(168, 29);
             this.labelCh2Name.TabIndex = 36;
-            this.labelCh2Name.Text = "VCM_S(2)";
+            this.labelCh2Name.Text = "VCM_S(CH2)";
             // 
             // label18
             // 
@@ -258,9 +258,9 @@
             this.label18.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(12, 280);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(123, 29);
+            this.label18.Size = new System.Drawing.Size(158, 29);
             this.label18.TabIndex = 37;
-            this.label18.Text = "Vocom(3)";
+            this.label18.Text = "Vocom(CH3)";
             // 
             // label19
             // 
@@ -268,9 +268,9 @@
             this.label19.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(12, 409);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(119, 29);
+            this.label19.Size = new System.Drawing.Size(154, 29);
             this.label19.TabIndex = 38;
-            this.label19.Text = "Vector(4)";
+            this.label19.Text = "Vector(CH4)";
             // 
             // powerCycleChannel4Button
             // 
@@ -321,10 +321,10 @@
             this.comboBoxChannels.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxChannels.FormattingEnabled = true;
             this.comboBoxChannels.Items.AddRange(new object[] {
-            "VCM_P(1)",
-            "VCM_S(2)",
-            "Vocom(3)",
-            "Vector(4)"});
+            "VCM_P(CH1)",
+            "VCM_S(CH2)",
+            "Vocom(CH3)",
+            "Vector(CH4)"});
             this.comboBoxChannels.Location = new System.Drawing.Point(557, 77);
             this.comboBoxChannels.Name = "comboBoxChannels";
             this.comboBoxChannels.Size = new System.Drawing.Size(178, 37);

@@ -3,39 +3,39 @@
   "WorkspaceRootPath": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|c:\\programmering\\pcr_repo\\powercontrolrnddesign\\powercontrolrnddesign\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\serialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\serialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\psucfg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\psucfg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|c:\\programmering\\pcr_repo\\powercontrolrnddesign\\powercontrolrnddesign\\controllercmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\controllercmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\controllercmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -68,7 +68,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
@@ -78,7 +78,7 @@
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\Form1.cs",
               "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form1.cs",
               "RelativeToolTip": "powercontrolRNDdesign\\Form1.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowCgAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-05T13:51:23.49Z",
               "IsPinned": true,
@@ -94,18 +94,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form3.cs [Design]",
-              "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs",
-              "RelativeDocumentMoniker": "powercontrolRNDdesign\\Form3.cs",
-              "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs [Design]",
-              "RelativeToolTip": "powercontrolRNDdesign\\Form3.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T11:41:55.606Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 11,
               "Title": "PsuCfg.cs",
               "DocumentMoniker": "C:\\gitclones\\PowerControlRnd\\src\\PowerControlRnd\\psu\\PsuCfg.cs",
@@ -114,7 +102,8 @@
               "RelativeToolTip": "..\\..\\..\\gitclones\\PowerControlRnd\\src\\PowerControlRnd\\psu\\PsuCfg.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:06:50.415Z"
+              "WhenOpened": "2025-02-24T14:06:50.415Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -126,7 +115,33 @@
               "RelativeToolTip": "..\\..\\..\\gitclones\\PowerControlRnd\\src\\PowerControlRnd\\psu\\ChannelCfg.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:07:51.721Z"
+              "WhenOpened": "2025-02-24T14:07:51.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Controller.cs",
+              "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Controller.cs",
+              "RelativeDocumentMoniker": "powercontrolRNDdesign\\Controller.cs",
+              "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Controller.cs",
+              "RelativeToolTip": "powercontrolRNDdesign\\Controller.cs",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAqwLcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T13:51:59.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form3.cs [Design]",
+              "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs",
+              "RelativeDocumentMoniker": "powercontrolRNDdesign\\Form3.cs",
+              "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs [Design]*",
+              "RelativeToolTip": "powercontrolRNDdesign\\Form3.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T11:41:55.606Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -134,24 +149,11 @@
               "Title": "Form3.cs",
               "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs",
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\Form3.cs",
-              "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs",
-              "RelativeToolTip": "powercontrolRNDdesign\\Form3.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBIAAAApAAAAAAAAAA==",
+              "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs*",
+              "RelativeToolTip": "powercontrolRNDdesign\\Form3.cs*",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAhwBcBAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-05T12:05:28.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Controller.cs",
-              "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Controller.cs",
-              "RelativeDocumentMoniker": "powercontrolRNDdesign\\Controller.cs",
-              "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Controller.cs",
-              "RelativeToolTip": "powercontrolRNDdesign\\Controller.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAADMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T13:51:59.637Z",
               "EditorCaption": ""
             },
             {
@@ -169,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Program.cs",
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\Program.cs",
@@ -182,26 +184,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Form3.Designer.cs",
               "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.Designer.cs",
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\Form3.Designer.cs",
-              "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.Designer.cs",
-              "RelativeToolTip": "powercontrolRNDdesign\\Form3.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
+              "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.Designer.cs*",
+              "RelativeToolTip": "powercontrolRNDdesign\\Form3.Designer.cs*",
+              "ViewState": "AgIAADUBAAAAAAAAAAAhwEYBAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-05T12:10:02.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "SerialManager.cs",
               "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\SerialManager.cs",
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\SerialManager.cs",
               "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\SerialManager.cs",
               "RelativeToolTip": "powercontrolRNDdesign\\SerialManager.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAUwEIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHEBAAAAAAAAAAAAAHgBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T13:40:02.583Z",
               "EditorCaption": ""
@@ -214,7 +216,7 @@
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\ControllerCmd.cs",
               "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\ControllerCmd.cs",
               "RelativeToolTip": "powercontrolRNDdesign\\ControllerCmd.cs",
-              "ViewState": "AgIAAEABAAAAAAAAAAAAAEUBAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAD0BAAAAAAAAAIBJwEUBAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-06T09:35:52.77Z",
               "EditorCaption": ""
@@ -227,7 +229,7 @@
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\Form1.Designer.cs",
               "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form1.Designer.cs",
               "RelativeToolTip": "powercontrolRNDdesign\\Form1.Designer.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAwwBwAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAABRwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T13:01:40.412Z",
               "EditorCaption": ""
@@ -242,7 +244,8 @@
               "RelativeToolTip": "powercontrolRNDdesign\\ChannelCfg.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T14:10:13.031Z"
+              "WhenOpened": "2025-02-24T14:10:13.031Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -254,7 +257,8 @@
               "RelativeToolTip": "powercontrolRNDdesign\\Logger.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAgwD8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T11:26:00.743Z"
+              "WhenOpened": "2024-12-10T11:26:00.743Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

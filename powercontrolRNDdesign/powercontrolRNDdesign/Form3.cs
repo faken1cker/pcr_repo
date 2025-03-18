@@ -37,14 +37,14 @@ namespace powercontrolRNDdesign
             if (rigType.Equals("VCM100", StringComparison.OrdinalIgnoreCase))
             {
                 // For VCM100, only channel 1 is connected.
-                labelCh1Name.Text = "VCM(1)";
-                labelCh2Name.Text = "Nothing connected(2)";
+                labelCh1Name.Text = "VCM(CH1)";
+                labelCh2Name.Text = "Nothing connected(CH2)";
             }
             else if (rigType.Equals("VCM200", StringComparison.OrdinalIgnoreCase))
             {
                 // For VCM200, channels 1 and 2 are used.
-                labelCh1Name.Text = "VCM_P(1)";  // Primary
-                labelCh2Name.Text = "VCM_S(2)";  // Secondary
+                labelCh1Name.Text = "VCM_P(CH1)";  // Primary
+                labelCh2Name.Text = "VCM_S(CH2)";  // Secondary
             }
             else
             {
@@ -247,11 +247,11 @@ namespace powercontrolRNDdesign
             // Kanal 1: Dynamic based on rigtype.
             if (rigType.Equals("VCM100", StringComparison.OrdinalIgnoreCase))
             {
-                comboBoxChannels.Items.Add("VCM(1)");
+                comboBoxChannels.Items.Add("VCM(CH1)");
             }
             else if (rigType.Equals("VCM200", StringComparison.OrdinalIgnoreCase))
             {
-                comboBoxChannels.Items.Add("VCM_P(1)");
+                comboBoxChannels.Items.Add("VCM_P(CH1)");
             }
             else
             {
@@ -262,11 +262,11 @@ namespace powercontrolRNDdesign
             // Channel 2: Dynamic based on rigtype.
             if (rigType.Equals("VCM100", StringComparison.OrdinalIgnoreCase))
             {
-                comboBoxChannels.Items.Add("N/A(2)");
+                comboBoxChannels.Items.Add("N/A(CH2)");
             }
             else if (rigType.Equals("VCM200", StringComparison.OrdinalIgnoreCase))
             {
-                comboBoxChannels.Items.Add("VCM_S(2)");
+                comboBoxChannels.Items.Add("VCM_S(CH2)");
             }
             else
             {
@@ -274,10 +274,10 @@ namespace powercontrolRNDdesign
             }
 
             // Channel 3 : Always Vocom(3).
-            comboBoxChannels.Items.Add("Vocom(3)");
+            comboBoxChannels.Items.Add("Vocom(CH3)");
 
             // Channel 4 : Always Vector(4)
-            comboBoxChannels.Items.Add("Vector(4)");
+            comboBoxChannels.Items.Add("Vector(CH4)");
         }
 
         private string GetRigTypeFromRegistry()
