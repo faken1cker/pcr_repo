@@ -59,6 +59,7 @@
             this.comboBoxChannels = new System.Windows.Forms.ComboBox();
             this.labelDeploymentStatus = new System.Windows.Forms.Label();
             this.DeploymentTimer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,7 +89,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(819, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(829, 24);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -129,20 +130,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(552, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 29);
+            this.label2.Size = new System.Drawing.Size(208, 29);
             this.label2.TabIndex = 17;
             this.label2.Text = "Input Voltage (V):";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(552, 194);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(254, 29);
+            this.label3.Size = new System.Drawing.Size(263, 29);
             this.label3.TabIndex = 18;
             this.label3.Text = "Input Max Current (A):";
             // 
@@ -225,10 +226,10 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(552, 45);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(185, 29);
+            this.label15.Size = new System.Drawing.Size(191, 29);
             this.label15.TabIndex = 34;
             this.label15.Text = "Select Channel:";
             // 
@@ -333,10 +334,10 @@
             // labelDeploymentStatus
             // 
             this.labelDeploymentStatus.AutoSize = true;
-            this.labelDeploymentStatus.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F);
+            this.labelDeploymentStatus.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeploymentStatus.Location = new System.Drawing.Point(347, 467);
             this.labelDeploymentStatus.Name = "labelDeploymentStatus";
-            this.labelDeploymentStatus.Size = new System.Drawing.Size(81, 29);
+            this.labelDeploymentStatus.Size = new System.Drawing.Size(82, 29);
             this.labelDeploymentStatus.TabIndex = 44;
             this.labelDeploymentStatus.Text = "label1";
             // 
@@ -345,12 +346,23 @@
             this.DeploymentTimer.Enabled = true;
             this.DeploymentTimer.Tick += new System.EventHandler(this.DeploymentTimer_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(347, 438);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 29);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "label1";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(819, 553);
+            this.ClientSize = new System.Drawing.Size(829, 553);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelDeploymentStatus);
             this.Controls.Add(this.comboBoxChannels);
             this.Controls.Add(this.powerCycleChannel1Button);
@@ -421,5 +433,6 @@
         private System.Windows.Forms.ComboBox comboBoxChannels;
         private System.Windows.Forms.Label labelDeploymentStatus;
         private System.Windows.Forms.Timer DeploymentTimer;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -8,19 +8,17 @@ namespace powercontrolRNDdesign
     public partial class Form3 : Form
     {
         private Controller _controller;
+        private Timer _refreshTimer;
 
-        // Timer for periodically reading measured voltage/current
-        private System.Windows.Forms.Timer _refreshTimer;
-
-        public Form3()
+        // Konstruktor som tar emot en existerande Controller
+        public Form3(Controller controller)
         {
             InitializeComponent();
-            // Initialize the Controller with the desired PSU setting from your JSON config
-            _controller = new Controller("vcm100mid"); // capital M to match the JSON
+            _controller = controller;  // Använd den redan skapade controller
 
-            // Set up the Timer in the constructor
-            _refreshTimer = new System.Windows.Forms.Timer();
-            _refreshTimer.Interval = 2000; // 2 seconds between updates
+            // Sätt upp timern
+            _refreshTimer = new Timer();
+            _refreshTimer.Interval = 2000; // 2 sekunder
             _refreshTimer.Tick += RefreshTimer_Tick;
             _refreshTimer.Start();
         }
