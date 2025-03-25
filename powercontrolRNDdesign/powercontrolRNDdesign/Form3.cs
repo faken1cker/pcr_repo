@@ -10,79 +10,176 @@ namespace powercontrolRNDdesign
         private Controller _controller;
         private Timer _refreshTimer;
 
-        // Konstruktor som tar emot en existerande Controller
+        // Constructor that takes an existing Controller from Form1
         public Form3(Controller controller)
         {
             InitializeComponent();
-            _controller = controller;  // Använd den redan skapade controller
+            _controller = controller;
 
-            // Sätt upp timern
+            // Set up a timer that periodically reads channel voltages/currents
+            // If you already do this in Designer, you can remove these lines.
             _refreshTimer = new Timer();
-            _refreshTimer.Interval = 2000; // 2 sekunder
+            _refreshTimer.Interval = 2000; // 2 seconds
             _refreshTimer.Tick += RefreshTimer_Tick;
             _refreshTimer.Start();
         }
 
+        /// <summary>
+        /// When the form loads, we do the following:
+        /// 1) Read "type" from the registry (VCM100, VCM200, RND320, etc.).
+        /// 2) Label channel names based on rigType.
+        /// 3) Populate the channel dropdown similarly.
+        /// 4) Update a label "PSU Type: RND320" or "PSU Type: RND790"
+        /// so the user sees what PSU is detected.
+        /// </summary>
         private void Form3_Load(object sender, EventArgs e)
         {
-            // Retrieve the rig type from the registry.
+            Logger.LogAction("Form3_Load: Start");
+
+            // 1) Read rigType from the registry
             string rigType = GetRigTypeFromRegistry();
+            Logger.LogAction($"Form3_Load: Found rigType = '{rigType}'.");
 
-            // Populate combobox dynamically.
-            PopulateChannelDropdown();
+            // 2) Show "PSU Type" in labelPsuType
+            // If it's RND320 => "RND320", else "RND790" (covers VCM100, VCM200)
+            if (rigType.Equals("RND320", StringComparison.OrdinalIgnoreCase))
+            {
+                labelPsuType.Text = "PSU Type: RND320";
+            }
+            else
+            {
+                labelPsuType.Text = "PSU Type: RND790";
+            }
+            Logger.LogAction($"Form3_Load: labelPsuType => {labelPsuType.Text}");
 
-            // Update channel labels based on the rig type.
+            // 3) Update channel labels:
+            // If VCM100 => CH1="VCM(CH1)", CH2="N/A(CH2)", CH3="Vocom(CH3)", CH4="Vector(CH4)"
+            // If VCM200 => CH1="VCM_P(CH1)", CH2="VCM_S(CH2)", CH3="Vocom(CH3)", CH4="Vector(CH4)"
+            // If RND320 => CH1="RND320 (CH1)", CH2-4="N/A"
+            // Fallback for any unknown type
             if (rigType.Equals("VCM100", StringComparison.OrdinalIgnoreCase))
             {
-                // For VCM100, only channel 1 is connected.
                 labelCh1Name.Text = "VCM(CH1)";
-                labelCh2Name.Text = "Nothing connected(CH2)";
+                labelCh2Name.Text = "N/A(CH2)";
+                labelCh3Name.Text = "Vocom(CH3)";
+                labelCh4Name.Text = "Vector(CH4)";
             }
             else if (rigType.Equals("VCM200", StringComparison.OrdinalIgnoreCase))
             {
-                // For VCM200, channels 1 and 2 are used.
-                labelCh1Name.Text = "VCM_P(CH1)";  // Primary
-                labelCh2Name.Text = "VCM_S(CH2)";  // Secondary
+                labelCh1Name.Text = "VCM_P(CH1)";
+                labelCh2Name.Text = "VCM_S(CH2)";
+                labelCh3Name.Text = "Vocom(CH3)";
+                labelCh4Name.Text = "Vector(CH4)";
+            }
+            else if (rigType.Equals("RND320", StringComparison.OrdinalIgnoreCase))
+            {
+                labelCh1Name.Text = "RND320 (CH1)";
+                labelCh2Name.Text = "N/A(CH2)";
+                labelCh3Name.Text = "N/A(CH3)";
+                labelCh4Name.Text = "N/A(CH4)";
             }
             else
             {
-                // Default labels if the rig type is unknown.
                 labelCh1Name.Text = "Channel 1";
                 labelCh2Name.Text = "Channel 2";
+                labelCh3Name.Text = "Channel 3";
+                labelCh4Name.Text = "Channel 4";
             }
 
-            // (Optional) Update other channel labels if needed.
+            // 4) Populate comboBoxChannels with similar logic
+            PopulateChannelDropdown(rigType);
+
+            Logger.LogAction("Form3_Load: Done");
         }
 
-
-        private void openInstructionsFileToolStripMenuItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Populates comboBoxChannels (if used) with names matching 
+        /// the channel labels from Form3_Load.
+        /// </summary>
+        private void PopulateChannelDropdown(string rigType)
         {
-            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
-            string filePath = System.IO.Path.Combine(baseDir, "instructions.txt");
+            comboBoxChannels.Items.Clear();
 
-            if (System.IO.File.Exists(filePath))
+            if (rigType.Equals("VCM100", StringComparison.OrdinalIgnoreCase))
             {
-                Logger.Log("Form3: Instructions file opened.");
-                System.Diagnostics.Process.Start("notepad.exe", filePath);
+                comboBoxChannels.Items.Add("VCM(CH1)");
+                comboBoxChannels.Items.Add("N/A(CH2)");
+                comboBoxChannels.Items.Add("Vocom(CH3)");
+                comboBoxChannels.Items.Add("Vector(CH4)");
+            }
+            else if (rigType.Equals("VCM200", StringComparison.OrdinalIgnoreCase))
+            {
+                comboBoxChannels.Items.Add("VCM_P(CH1)");
+                comboBoxChannels.Items.Add("VCM_S(CH2)");
+                comboBoxChannels.Items.Add("Vocom(CH3)");
+                comboBoxChannels.Items.Add("Vector(CH4)");
+            }
+            else if (rigType.Equals("RND320", StringComparison.OrdinalIgnoreCase))
+            {
+                comboBoxChannels.Items.Add("RND320(CH1)");
+                comboBoxChannels.Items.Add("N/A(CH2)");
+                comboBoxChannels.Items.Add("N/A(CH3)");
+                comboBoxChannels.Items.Add("N/A(CH4)");
             }
             else
             {
-                Logger.Log("Form3: Instructions file not found.");
-                MessageBox.Show("Instructions file not found.",
-                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                comboBoxChannels.Items.Add("Channel 1");
+                comboBoxChannels.Items.Add("Channel 2");
+                comboBoxChannels.Items.Add("Channel 3");
+                comboBoxChannels.Items.Add("Channel 4");
+            }
+
+            if (comboBoxChannels.Items.Count > 0)
+            {
+                comboBoxChannels.SelectedIndex = 0;
             }
         }
 
         /// <summary>
-        /// Timer tick event: reads the measured voltage/current for each channel
-        /// and updates the labels. This runs every 2 seconds (as per _refreshTimer.Interval).
+        /// Reads the registry key "type" under HKLM\SOFTWARE\V3rigInfo,
+        /// logs its value, and returns "VCM100" if none is found.
+        /// </summary>
+        private string GetRigTypeFromRegistry()
+        {
+            try
+            {
+                using (RegistryKey baseKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64))
+                using (RegistryKey key = baseKey.OpenSubKey(@"SOFTWARE\V3rigInfo", false))
+                {
+                    if (key != null)
+                    {
+                        object value = key.GetValue("type");
+                        if (value != null)
+                        {
+                            string rigType = value.ToString().Trim();
+                            Logger.LogAction("Form3: Registry 'type' => " + rigType);
+                            return rigType;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogAction("Form3: Error reading 'type' from registry: " + ex.Message, "Error");
+            }
+
+            Logger.LogAction("Form3: No 'type' found in registry, defaulting to 'VCM100'.");
+            return "VCM100";
+        }
+
+        /// <summary>
+        /// Timer event that fires every 2 seconds (_refreshTimer).
+        /// Reads measured voltage/current from each channel via the Controller,
+        /// and updates labels so the user sees live values.
+        /// 
+        /// If it's a single-channel PSU (RND320), channels 2-4 will remain N/A
+        /// or 0. 
         /// </summary>
         private async void RefreshTimer_Tick(object sender, EventArgs e)
         {
-            // Only proceed if the PSU is connected
             if (_controller != null && _controller.IsConnected)
             {
-                // ----- CHANNEL 1 -----
+                // Channel 1
                 double? ch1Volt = await _controller.GetMeasuredVoltageFromChannelAsync(1);
                 double? ch1Curr = await _controller.GetMeasuredCurrentFromChannelAsync(1);
 
@@ -94,7 +191,7 @@ namespace powercontrolRNDdesign
                     ? $"Current Amperage (A): {ch1Curr.Value:F2}"
                     : "Current Amperage (A): N/A";
 
-                // ----- CHANNEL 2 -----
+                // Channel 2
                 double? ch2Volt = await _controller.GetMeasuredVoltageFromChannelAsync(2);
                 double? ch2Curr = await _controller.GetMeasuredCurrentFromChannelAsync(2);
 
@@ -106,7 +203,7 @@ namespace powercontrolRNDdesign
                     ? $"Current Amperage (A): {ch2Curr.Value:F2}"
                     : "Current Amperage (A): N/A";
 
-                // ----- CHANNEL 3 -----
+                // Channel 3
                 double? ch3Volt = await _controller.GetMeasuredVoltageFromChannelAsync(3);
                 double? ch3Curr = await _controller.GetMeasuredCurrentFromChannelAsync(3);
 
@@ -118,7 +215,7 @@ namespace powercontrolRNDdesign
                     ? $"Current Amperage (A): {ch3Curr.Value:F2}"
                     : "Current Amperage (A): N/A";
 
-                // ----- CHANNEL 4 -----
+                // Channel 4
                 double? ch4Volt = await _controller.GetMeasuredVoltageFromChannelAsync(4);
                 double? ch4Curr = await _controller.GetMeasuredCurrentFromChannelAsync(4);
 
@@ -132,23 +229,21 @@ namespace powercontrolRNDdesign
             }
             else
             {
-                // If not connected, maybe set them all to N/A
+                // If not connected, show them all as N/A
                 labelCh1Voltage.Text = "Current Voltage (V): N/A";
                 labelCh1Current.Text = "Current Amperage (A): N/A";
-
                 labelCh2Voltage.Text = "Current Voltage (V): N/A";
                 labelCh2Current.Text = "Current Amperage (A): N/A";
-
                 labelCh3Voltage.Text = "Current Voltage (V): N/A";
                 labelCh3Current.Text = "Current Amperage (A): N/A";
-
                 labelCh4Voltage.Text = "Current Voltage (V): N/A";
                 labelCh4Current.Text = "Current Amperage (A): N/A";
             }
         }
 
         /// <summary>
-        /// Apply button event handler: sets the user-specified voltage/current on the chosen channel
+        /// Apply button event. Sets voltage/current on the chosen channel (via comboBoxChannels).
+        /// This logic is unchanged from your original code, we only add logs or minor clarifications.
         /// </summary>
         private async void applyButton_Click(object sender, EventArgs e)
         {
@@ -184,17 +279,21 @@ namespace powercontrolRNDdesign
                 MessageBox.Show($"Channel {channel} voltage set to: {confirmedVoltage} V",
                                 "Settings Applied", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                Logger.LogAction($"Apply succeeded: {voltage} V, {current} A on channel {channel}.", "Info");
+                Logger.LogAction($"Form3: Apply succeeded => {voltage}V, {current}A on channel {channel}.", "Info");
             }
             catch (Exception ex)
             {
-                Logger.LogError($"An error occurred in applyButton_Click: {ex.Message}");
+                Logger.LogError($"Form3: applyButton_Click error => {ex.Message}");
                 MessageBox.Show($"An error occurred: {ex.Message}",
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // Power cycle button event handlers (one per channel):
+        /// <summary>
+        /// Power cycle button event handlers, one per channel (1-4).
+        /// These call the Controller's PowerCycleChannel, which now 
+        /// knows if it's single- or multi-channel behind the scenes.
+        /// </summary>
         private async void powerCycleChannel1Button_Click(object sender, EventArgs e)
         {
             await PowerCycleChannel(1);
@@ -213,131 +312,77 @@ namespace powercontrolRNDdesign
         }
 
         /// <summary>
-        /// Helper method that initiates a power cycle on the specified channel using the Controller.
-        /// Logs the start and completion, then displays a confirmation message.
+        /// A helper method that calls Controller.PowerCycleChannel 
+        /// and displays a message once done. This logic remains the same 
+        /// as your original code, with optional logs added.
         /// </summary>
         private async Task PowerCycleChannel(int channel)
         {
             try
             {
-                Logger.LogAction($"Power cycle started on channel {channel}.", "Info");
+                Logger.LogAction($"Form3: Start power cycle on channel {channel}.");
                 await _controller.PowerCycleChannel(channel);
-                Logger.LogAction($"Power cycle completed on channel {channel}.", "Info");
+                Logger.LogAction($"Form3: Power cycle completed on channel {channel}.");
                 MessageBox.Show($"Channel {channel} power cycle completed.",
                                 "Power Cycle", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                Logger.LogError($"Error during power cycle on channel {channel}: {ex.Message}");
+                Logger.LogError($"Form3: Error in power cycle channel {channel}: {ex.Message}");
                 MessageBox.Show($"Error during power cycle on channel {channel}: {ex.Message}",
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void PopulateChannelDropdown()
+        /// <summary>
+        /// Menu item that opens instructions.txt in Notepad, 
+        /// preserving your original functionality.
+        /// </summary>
+        private void openInstructionsFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Get rigtype from registry.
-            string rigType = GetRigTypeFromRegistry();
+            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = System.IO.Path.Combine(baseDir, "instructions.txt");
 
-            // Clear previous values in combobox.
-            comboBoxChannels.Items.Clear();
-
-            // Kanal 1: Dynamic based on rigtype.
-            if (rigType.Equals("VCM100", StringComparison.OrdinalIgnoreCase))
+            if (System.IO.File.Exists(filePath))
             {
-                comboBoxChannels.Items.Add("VCM(CH1)");
-            }
-            else if (rigType.Equals("VCM200", StringComparison.OrdinalIgnoreCase))
-            {
-                comboBoxChannels.Items.Add("VCM_P(CH1)");
+                Logger.Log("Form3: Instructions file opened.");
+                System.Diagnostics.Process.Start("notepad.exe", filePath);
             }
             else
             {
-                // If rigtype is unknown.
-                comboBoxChannels.Items.Add("Channel 1");
+                Logger.Log("Form3: Instructions file not found.");
+                MessageBox.Show("Instructions file not found.",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            // Channel 2: Dynamic based on rigtype.
-            if (rigType.Equals("VCM100", StringComparison.OrdinalIgnoreCase))
-            {
-                comboBoxChannels.Items.Add("N/A(CH2)");
-            }
-            else if (rigType.Equals("VCM200", StringComparison.OrdinalIgnoreCase))
-            {
-                comboBoxChannels.Items.Add("VCM_S(CH2)");
-            }
-            else
-            {
-                comboBoxChannels.Items.Add("Channel 2");
-            }
-
-            // Channel 3 : Always Vocom(3).
-            comboBoxChannels.Items.Add("Vocom(CH3)");
-
-            // Channel 4 : Always Vector(4)
-            comboBoxChannels.Items.Add("Vector(CH4)");
         }
-
-        private string GetRigTypeFromRegistry()
-        {
-            try
-            {
-                // Open base key with 64-bit view explicitly.
-                using (RegistryKey baseKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64))
-                using (RegistryKey key = baseKey.OpenSubKey(@"SOFTWARE\V3rigInfo", false))
-                {
-                    if (key != null)
-                    {
-                        object value = key.GetValue("type");
-                        if (value != null)
-                        {
-                            string rigType = value.ToString().Trim();
-                            Logger.LogAction("Rig type read from registry: " + rigType, "Info");
-                            return rigType;
-                        }
-                        else
-                        {
-                            Logger.LogAction("Registry value 'type' not found.", "Warning");
-                        }
-                    }
-                    else
-                    {
-                        Logger.LogAction("Registry key 'SOFTWARE\\V3rigInfo' not found.", "Warning");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.LogAction("Error reading rig type from registry: " + ex.Message, "Error");
-            }
-            return "VCM100";
-        }
-
 
         /// <summary>
-        /// Ensures the PSU connection is closed when the form is closing.
+        /// If you have a deployment timer in the Designer named 'DeploymentTimer', 
+        /// this event updates labelDeploymentStatus.
         /// </summary>
-        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            _controller.Disconnect();
-        }
-
         private void DeploymentTimer_Tick(object sender, EventArgs e)
         {
             if (_controller != null)
             {
-                // Get the deployment status from Controller (which gets it from SerialManager)
                 bool deploymentActive = _controller.DeploymentActive;
-
-                // Update the label text based on the status
                 labelDeploymentStatus.Text = deploymentActive
                     ? "Deployment Status: Active (Read-Only)"
                     : "Deployment Status: Inactive (Read/Write)";
 
-                // Change the label color for better visibility
-                labelDeploymentStatus.ForeColor = deploymentActive ? System.Drawing.Color.Red : System.Drawing.Color.Green;
+                labelDeploymentStatus.ForeColor = deploymentActive
+                    ? System.Drawing.Color.Red
+                    : System.Drawing.Color.Green;
             }
         }
 
+        /// <summary>
+        /// Disconnect from the PSU when Form3 closes, so it isn't 
+        /// left locked or connected. We log the action for clarity.
+        /// </summary>
+        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _controller.Disconnect();
+            Logger.Log("Form3: PSU disconnected, form closing.");
+        }
     }
 }

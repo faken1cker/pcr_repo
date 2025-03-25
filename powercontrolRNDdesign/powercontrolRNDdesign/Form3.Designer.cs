@@ -50,8 +50,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.labelCh1Name = new System.Windows.Forms.Label();
             this.labelCh2Name = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.labelCh3Name = new System.Windows.Forms.Label();
+            this.labelCh4Name = new System.Windows.Forms.Label();
             this.powerCycleChannel4Button = new System.Windows.Forms.Button();
             this.powerCycleChannel3Button = new System.Windows.Forms.Button();
             this.powerCycleChannel2Button = new System.Windows.Forms.Button();
@@ -59,7 +59,7 @@
             this.comboBoxChannels = new System.Windows.Forms.ComboBox();
             this.labelDeploymentStatus = new System.Windows.Forms.Label();
             this.DeploymentTimer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelPsuType = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -253,25 +253,25 @@
             this.labelCh2Name.TabIndex = 36;
             this.labelCh2Name.Text = "VCM_S(CH2)";
             // 
-            // label18
+            // labelCh3Name
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(12, 280);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(158, 29);
-            this.label18.TabIndex = 37;
-            this.label18.Text = "Vocom(CH3)";
+            this.labelCh3Name.AutoSize = true;
+            this.labelCh3Name.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCh3Name.Location = new System.Drawing.Point(12, 280);
+            this.labelCh3Name.Name = "labelCh3Name";
+            this.labelCh3Name.Size = new System.Drawing.Size(158, 29);
+            this.labelCh3Name.TabIndex = 37;
+            this.labelCh3Name.Text = "Vocom(CH3)";
             // 
-            // label19
+            // labelCh4Name
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(12, 409);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(154, 29);
-            this.label19.TabIndex = 38;
-            this.label19.Text = "Vector(CH4)";
+            this.labelCh4Name.AutoSize = true;
+            this.labelCh4Name.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCh4Name.Location = new System.Drawing.Point(12, 409);
+            this.labelCh4Name.Name = "labelCh4Name";
+            this.labelCh4Name.Size = new System.Drawing.Size(154, 29);
+            this.labelCh4Name.TabIndex = 38;
+            this.labelCh4Name.Text = "Vector(CH4)";
             // 
             // powerCycleChannel4Button
             // 
@@ -346,15 +346,15 @@
             this.DeploymentTimer.Enabled = true;
             this.DeploymentTimer.Tick += new System.EventHandler(this.DeploymentTimer_Tick);
             // 
-            // label1
+            // labelPsuType
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(347, 438);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 29);
-            this.label1.TabIndex = 45;
-            this.label1.Text = "label1";
+            this.labelPsuType.AutoSize = true;
+            this.labelPsuType.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Bold);
+            this.labelPsuType.Location = new System.Drawing.Point(347, 438);
+            this.labelPsuType.Name = "labelPsuType";
+            this.labelPsuType.Size = new System.Drawing.Size(82, 29);
+            this.labelPsuType.TabIndex = 45;
+            this.labelPsuType.Text = "label1";
             // 
             // Form3
             // 
@@ -362,15 +362,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(829, 553);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelPsuType);
             this.Controls.Add(this.labelDeploymentStatus);
             this.Controls.Add(this.comboBoxChannels);
             this.Controls.Add(this.powerCycleChannel1Button);
             this.Controls.Add(this.powerCycleChannel2Button);
             this.Controls.Add(this.powerCycleChannel3Button);
             this.Controls.Add(this.powerCycleChannel4Button);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
+            this.Controls.Add(this.labelCh4Name);
+            this.Controls.Add(this.labelCh3Name);
             this.Controls.Add(this.labelCh2Name);
             this.Controls.Add(this.labelCh1Name);
             this.Controls.Add(this.label15);
@@ -424,8 +424,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label labelCh1Name;
         private System.Windows.Forms.Label labelCh2Name;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label labelCh3Name;
+        private System.Windows.Forms.Label labelCh4Name;
         private System.Windows.Forms.Button powerCycleChannel4Button;
         private System.Windows.Forms.Button powerCycleChannel3Button;
         private System.Windows.Forms.Button powerCycleChannel2Button;
@@ -433,6 +433,6 @@
         private System.Windows.Forms.ComboBox comboBoxChannels;
         private System.Windows.Forms.Label labelDeploymentStatus;
         private System.Windows.Forms.Timer DeploymentTimer;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelPsuType;
     }
 }
