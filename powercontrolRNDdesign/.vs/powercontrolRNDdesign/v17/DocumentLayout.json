@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|c:\\programmering\\pcr_repo\\powercontrolrnddesign\\powercontrolrnddesign\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|c:\\programmering\\pcr_repo\\powercontrolrnddesign\\powercontrolrnddesign\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\controllercmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\controllercmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolrnddesign\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC2045A5-EE0E-47DE-B17B-0598AECBC2F7}|powercontrolRNDdesign\\powercontrolRNDdesign.csproj|solutionrelative:powercontrolrnddesign\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +46,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form1.cs",
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\Form1.cs",
@@ -55,8 +55,7 @@
               "ViewState": "AgIAAGgAAAAAAAAAAAAqwIAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-05T13:51:23.49Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -69,18 +68,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs",
+              "RelativeDocumentMoniker": "powercontrolRNDdesign\\Form3.cs",
+              "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs",
+              "RelativeToolTip": "powercontrolRNDdesign\\Form3.cs",
+              "ViewState": "AgIAAEwBAAAAAAAAAAAhwGUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T12:05:28.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form3.cs [Design]",
               "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs",
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\Form3.cs",
-              "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs [Design]*",
-              "RelativeToolTip": "powercontrolRNDdesign\\Form3.cs [Design]*",
+              "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs [Design]",
+              "RelativeToolTip": "powercontrolRNDdesign\\Form3.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T11:41:55.606Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SerialManager.cs",
               "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\SerialManager.cs",
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\SerialManager.cs",
@@ -88,12 +100,11 @@
               "RelativeToolTip": "powercontrolRNDdesign\\SerialManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T13:40:02.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T13:40:02.583Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form3.Designer.cs",
               "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.Designer.cs",
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\Form3.Designer.cs",
@@ -106,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ControllerCmd.cs",
               "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\ControllerCmd.cs",
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\ControllerCmd.cs",
@@ -118,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\Form1.Designer.cs",
@@ -126,32 +137,19 @@
               "RelativeToolTip": "powercontrolRNDdesign\\Form1.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:01:40.412Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T13:01:40.412Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Logger.cs",
               "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Logger.cs",
               "RelativeDocumentMoniker": "powercontrolRNDdesign\\Logger.cs",
               "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Logger.cs",
               "RelativeToolTip": "powercontrolRNDdesign\\Logger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAE4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T11:26:00.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form3.cs",
-              "DocumentMoniker": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs",
-              "RelativeDocumentMoniker": "powercontrolRNDdesign\\Form3.cs",
-              "ToolTip": "C:\\programmering\\pcr_repo\\powercontrolRNDdesign\\powercontrolRNDdesign\\Form3.cs*",
-              "RelativeToolTip": "powercontrolRNDdesign\\Form3.cs*",
-              "ViewState": "AgIAAF0BAAAAAAAAAAAAAIQBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T12:05:28.328Z",
+              "WhenOpened": "2024-12-10T11:26:00.743Z",
               "EditorCaption": ""
             }
           ]

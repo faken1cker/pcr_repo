@@ -1,21 +1,67 @@
------------------------------------------------------------------------------------------------
-1. Overview
-The program facilitates:
-Configuration of voltage and current parameters.
-Selection of predefined VCM configurations.
-Monitoring of live settings.
------------------------------------------------------------------------------------------------
-2. Operating Instructions
-Step 1: Starting the Configuration Process
-Launch the program.
-In the main window (Form1), click the Start button to proceed.
-Step 2: Configuring Parameters
-In the configuration window (Form2):
-Enter your credentials if required.
-Select the desired VCM configuration (e.g., VCM101, VCM102, ..., VCM202) from the dropdown menu.
-Click Confirm to save the selection.
-Step 3: Monitoring Settings
-The monitoring window (Form3) will display:
-The selected VCM configuration.
-Real-time voltage and current values.
------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+                           POWERCONTROLRND PROGRAM INSTRUCTIONS
+--------------------------------------------------------------------------------
+                                     *PLEASE NOTE*
+All actions are logged locally, along with your username (A123456)
+--------------------------------------------------------------------------------			   
+
+1. START-UP (WELCOMING SCREEN)
+--------------------------------------------------------------------------------
+   - When you launch the application, a welcoming window appears.
+   - Click the "Start" button to continue.
+
+2. AUTOMATIC RIG DETECTION
+--------------------------------------------------------------------------------
+   - After pressing "Start," the program checks the Windows registry key "type"
+     to see if the rig is VCM100, VCM200, or RND320. If no PSU is connected
+     a Warning pops up. 
+   - It then adjusts channel names, default voltages, and other settings based
+     on that detected rig.
+
+3. MAIN CONTROL WINDOW
+--------------------------------------------------------------------------------
+   - Once the rig type is recognized, the main control window opens.
+   - In this window you can:
+     • Monitor voltage (V) and current (A) for each channel.
+     • Adjust voltage/current on specific channels.
+     • Power-cycle individual channels.
+
+4. CHANNEL NAMES & BEHAVIOR
+--------------------------------------------------------------------------------
+   - Depending on the rig type:
+     • VCM100 or VCM200 rigs may have multiple channels (1–4).
+     • RND320 is single-channel; channels 2–4 show "N/A."
+   - Each channel is labeled according to the rig type. 
+   - For instance, if it's VCM100, you’ll see "VCM(CH1)" and "N/A(CH2)."
+
+5. CHANGING VOLTAGE AND CURRENT
+--------------------------------------------------------------------------------
+   - Select the channel from the dropdown list (top-left side).
+   - Enter the desired voltage (0–24 V) and current (0–5 A) in the text fields.
+   - Click "Apply" to confirm and set these values on the PSU.
+
+6. POWER CYCLING A CHANNEL
+--------------------------------------------------------------------------------
+   - Each channel row has a "Power Cycle" button.
+   - To power cycle, simply press that button. The program will:
+     • Turn the channel output off (allowing voltage to drop),
+     • Then automatically turns it back on.
+
+7. PSU TYPE & DEPLOYMENT STATUS
+--------------------------------------------------------------------------------
+   - The main window shows two special labels:
+     1) PSU Type: either "RND790" or "RND320," depending on your rig.
+     2) Deployment Status: "Active (Read-Only)" or "Inactive (Read/Write)."
+   - If Deployment is "Active," you can only monitor voltage/current—no changes
+     or power cycles are allowed (to protect the PSU during deployment).
+   - If "Inactive," you have full access to modify settings and power cycle.
+
+8. CLOSING THE PROGRAM
+--------------------------------------------------------------------------------
+   - When finished, close the main control window.
+   - The program automatically disconnects from the PSU, ensuring it isn’t 
+     left in a locked or connected state.
+
+--------------------------------------------------------------------------------
+                         (END OF INSTRUCTIONS)
+--------------------------------------------------------------------------------
