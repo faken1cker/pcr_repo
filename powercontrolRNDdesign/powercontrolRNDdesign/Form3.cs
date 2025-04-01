@@ -10,14 +10,14 @@ namespace powercontrolRNDdesign
         private Controller _controller;
         private Timer _refreshTimer;
 
-        // Constructor that takes an existing Controller from Form1
+        // This form displays channel statuses and controls for user interactions
+        // (voltage/current changes, power cycling, etc.).
         public Form3(Controller controller)
         {
             InitializeComponent();
             _controller = controller;
 
-            // Set up a timer that periodically reads channel voltages/currents
-            // If you already do this in Designer, you can remove these lines.
+            // We start a timer to auto-update channel voltages/currents every 2s.
             _refreshTimer = new Timer();
             _refreshTimer.Interval = 2000; // 2 seconds
             _refreshTimer.Tick += RefreshTimer_Tick;
@@ -243,7 +243,6 @@ namespace powercontrolRNDdesign
 
         /// <summary>
         /// Apply button event. Sets voltage/current on the chosen channel (via comboBoxChannels).
-        /// This logic is unchanged from your original code, we only add logs or minor clarifications.
         /// </summary>
         private async void applyButton_Click(object sender, EventArgs e)
         {
@@ -312,9 +311,7 @@ namespace powercontrolRNDdesign
         }
 
         /// <summary>
-        /// A helper method that calls Controller.PowerCycleChannel 
-        /// and displays a message once done. This logic remains the same 
-        /// as your original code, with optional logs added.
+        /// A helper method that calls Controller.PowerCycleChannel and displays a message once done.
         /// </summary>
         private async Task PowerCycleChannel(int channel)
         {
@@ -335,8 +332,7 @@ namespace powercontrolRNDdesign
         }
 
         /// <summary>
-        /// Menu item that opens instructions.txt in Notepad, 
-        /// preserving your original functionality.
+        /// Menu item that opens instructions.txt in Notepad
         /// </summary>
         private void openInstructionsFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -357,8 +353,7 @@ namespace powercontrolRNDdesign
         }
 
         /// <summary>
-        /// If you have a deployment timer in the Designer named 'DeploymentTimer', 
-        /// this event updates labelDeploymentStatus.
+        /// This event updates labelDeploymentStatus.
         /// </summary>
         private void DeploymentTimer_Tick(object sender, EventArgs e)
         {

@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
-                           POWERCONTROLRND PROGRAM INSTRUCTIONS
+                        POWERCONTROLRND PROGRAM INSTRUCTIONS
 --------------------------------------------------------------------------------
-                                     *PLEASE NOTE*
+                                   *PLEASE NOTE*
 All actions are logged locally, along with your username (A123456)
 --------------------------------------------------------------------------------			   
 
@@ -63,5 +63,5 @@ All actions are logged locally, along with your username (A123456)
      left in a locked or connected state.
 
 --------------------------------------------------------------------------------
-                         (END OF INSTRUCTIONS)
+                               (END OF INSTRUCTIONS)
 --------------------------------------------------------------------------------

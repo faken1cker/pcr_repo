@@ -8,6 +8,7 @@ using Microsoft.Win32;
 
 namespace powercontrolRNDdesign
 {
+    // SerialManager handles all low-level serial comms with the PSU.
     public class SerialManager
     {
         private string _comPort = "";
@@ -260,7 +261,7 @@ namespace powercontrolRNDdesign
 
         #region Handle connection to the power supply
 
-        public bool ConnectToPsu(string psuRegEx)
+        public bool ConnectToPsu(string psuRegEx)  // Enumerates COM ports, tries to match psuRegEx against the PSU's *IDN? response.
         {
             _connected = false;
 
@@ -300,7 +301,7 @@ namespace powercontrolRNDdesign
             return _connected;
         }
 
-        public bool DisconnectPsu()
+        public bool DisconnectPsu() // If connected, send lock off, close the port, log the result.
         {
             if (_connected)
             {
@@ -319,7 +320,7 @@ namespace powercontrolRNDdesign
 
         public bool IsConnected() => _connected;
 
-        private bool TryOpenComPort(string portName)
+        private bool TryOpenComPort(string portName)    // Attempts to open the given COM port at _baudRate.
         {
             bool result = false;
             try

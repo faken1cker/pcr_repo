@@ -12,10 +12,9 @@ namespace powercontrolRNDdesign
         }
 
         /// <summary>
-        /// Button event that starts the main program flow.
-        /// This code chooses the correct PSU setting ("anyRigRnd320_24V" or "vcm100mid")
-        /// based on what the registry says for "type". 
-        /// We also log each step with Logger.Log, so we can see what's happening.
+        /// The main entry point for starting the PSU connection flow.
+        /// Another dev can see that we pick either "RND320" or "vcm100mid" by reading the registry.
+        /// Then we create a Controller, verify connectivity, and move on to Form3.
         /// </summary>
         private async void button1_Click(object sender, EventArgs e)
         {
@@ -26,30 +25,29 @@ namespace powercontrolRNDdesign
             this.UseWaitCursor = true;
             Cursor.Current = Cursors.WaitCursor;
 
-            // Step 1: Read the rig type from registry (VCM100, VCM200, RND320, etc.)
+            // Read the rigType from registry. (RND320 => single channel, VCM => multi-channel.)
             string rigType = GetRigTypeFromRegistry();
             Logger.Log($"Form1: Registry key 'type' read as '{rigType}'.");
 
-            // Step 2: Decide which PSU setting from Psu.json we should use
+            // Decide which PSU setting name to pass into Controller
             string psuSetting;
             if (rigType.Equals("RND320", StringComparison.OrdinalIgnoreCase))
             {
-                // For single-channel RND320 rigs, pick the old code's "anyRigRnd320_24V"
+                // Single-channel config from Psu.json
                 psuSetting = "anyRigRnd320_24V";
                 Logger.Log($"Form1: Single-channel PSU chosen: {psuSetting}");
             }
             else
             {
-                // For both "VCM100" and "VCM200" or any other text, pick "vcm100mid"
-                // Make sure it matches exactly the "setting" string in Psu.json
+                // Default to multi-channel config for VCM rigs
                 psuSetting = "vcm100mid";
                 Logger.Log($"Form1: Multi-channel PSU chosen: {psuSetting}");
             }
 
-            // Step 3: Create the Controller with that chosen PSU setting
+            // Create the Controller with that chosen PSU setting
             Controller testController = new Controller(psuSetting);
 
-            // Step 4: Verify if it's actually connected to the PSU
+            // Verify if it's actually connected to the PSU, if not, warn and return
             if (!testController.IsConnected)
             {
                 Logger.Log("Form1: No PSU detected. Aborting start");

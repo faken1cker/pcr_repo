@@ -33,13 +33,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.instructionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openInstructionsFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.openInstructionsFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -79,8 +79,15 @@
             this.instructionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openInstructionsFileToolStripMenuItem});
             this.instructionsToolStripMenuItem.Name = "instructionsToolStripMenuItem";
-            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.instructionsToolStripMenuItem.Text = "Instructions";
+            // 
+            // openInstructionsFileToolStripMenuItem
+            // 
+            this.openInstructionsFileToolStripMenuItem.Name = "openInstructionsFileToolStripMenuItem";
+            this.openInstructionsFileToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.openInstructionsFileToolStripMenuItem.Text = "Open Instructions File";
+            this.openInstructionsFileToolStripMenuItem.Click += new System.EventHandler(this.openInstructionsFileToolStripMenuItem_Click);
             // 
             // button1
             // 
@@ -120,9 +127,9 @@
             this.label3.Font = new System.Drawing.Font("Volvo Novum 3.1", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(32, 174);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(602, 29);
+            this.label3.Size = new System.Drawing.Size(593, 29);
             this.label3.TabIndex = 6;
-            this.label3.Text = "A program to remote monitor and powercycle the PSU";
+            this.label3.Text = "A program to remote control and powercycle the PSU";
             // 
             // label4
             // 
@@ -143,13 +150,6 @@
             this.label5.Size = new System.Drawing.Size(291, 29);
             this.label5.TabIndex = 8;
             this.label5.Text = "under \"Help-Instructions\"";
-            // 
-            // openInstructionsFileToolStripMenuItem
-            // 
-            this.openInstructionsFileToolStripMenuItem.Name = "openInstructionsFileToolStripMenuItem";
-            this.openInstructionsFileToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.openInstructionsFileToolStripMenuItem.Text = "Open Instructions File";
-            this.openInstructionsFileToolStripMenuItem.Click += new System.EventHandler(this.openInstructionsFileToolStripMenuItem_Click);
             // 
             // Form1
             // 
